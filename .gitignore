@@ -1,0 +1,7 @@
+.env.supabase
+.DS_Store
+NOTES.md 
+__pycache__/
+*.pyc
+reports/
+*.log
