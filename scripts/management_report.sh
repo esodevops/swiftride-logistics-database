@@ -7,6 +7,7 @@ PROJECT_DIR=$(cd "${SCRIPT_DIR}/.." && pwd)
 ENV_FILE="${PROJECT_DIR}/.env.supabase"
 REPORT_DIR="${PROJECT_DIR}/reports"
 REPORT_FILE="${REPORT_DIR}/swiftride_management_report.md"
+TMP_REPORT_FILE="${REPORT_FILE}.tmp"
 DB_URL=${SUPABASE_DB_URL:-}
 
 usage() {
@@ -45,6 +46,7 @@ if ! command -v psql >/dev/null 2>&1; then
 fi
 
 mkdir -p "$REPORT_DIR"
+trap 'rm -f "$TMP_REPORT_FILE"' EXIT
 
 run_query() {
     local sql=$1
@@ -54,6 +56,7 @@ run_query() {
         -X \
         -q \
         -A \
+        -P footer=off \
         -F $'\t' \
         -c "$sql"
 }
@@ -95,7 +98,7 @@ append_markdown_table() {
             }
         ' "$tmp_file"
         printf '\n'
-    } >> "$REPORT_FILE"
+    } >> "$TMP_REPORT_FILE"
 
     rm -f "$tmp_file"
 }
@@ -106,7 +109,7 @@ append_markdown_table() {
     printf 'Report generated: %s\n\n' "$(date '+%Y-%m-%d %H:%M:%S %Z')"
     printf '## Executive Summary\n\n'
     printf 'This report summarizes customer activity, delivery operations, revenue, payment status, inventory levels, and cross-schema operational visibility for SwiftRide Logistics.\n'
-} > "$REPORT_FILE"
+} > "$TMP_REPORT_FILE"
 
 append_markdown_table \
     "Database Coverage" \
@@ -237,6 +240,7 @@ append_markdown_table \
     printf -- '- Monitor failed, pending, and refunded payments with the finance team.\n'
     printf -- '- Use high-value customer insights to plan retention and loyalty offers.\n'
     printf -- '- Use driver workload data to balance assignments and recognize strong performance.\n'
-} >> "$REPORT_FILE"
+} >> "$TMP_REPORT_FILE"
 
+mv "$TMP_REPORT_FILE" "$REPORT_FILE"
 echo "Management report created: ${REPORT_FILE}"
