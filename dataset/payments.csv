@@ -1,0 +1,601 @@
+payment_id,order_id,payment_method,payment_status
+1,1,Card,Paid
+2,2,Bank Transfer,Paid
+3,3,Bank Transfer,Paid
+4,4,USSD,Paid
+5,5,Wallet,Failed
+6,6,Wallet,Paid
+7,7,USSD,Paid
+8,8,Card,Refunded
+9,9,USSD,Paid
+10,10,USSD,Paid
+11,11,Bank Transfer,Paid
+12,12,Wallet,Pending
+13,13,USSD,Paid
+14,14,Card,Pending
+15,15,Cash,Paid
+16,16,USSD,Paid
+17,17,Cash,Paid
+18,18,Bank Transfer,Paid
+19,19,Bank Transfer,Failed
+20,20,USSD,Paid
+21,21,Bank Transfer,Paid
+22,22,Card,Paid
+23,23,Card,Paid
+24,24,Bank Transfer,Paid
+25,25,Wallet,Paid
+26,26,Card,Paid
+27,27,Bank Transfer,Failed
+28,28,USSD,Refunded
+29,29,Wallet,Paid
+30,30,Cash,Paid
+31,31,Card,Paid
+32,32,Cash,Paid
+33,33,Bank Transfer,Paid
+34,34,Wallet,Paid
+35,35,Card,Paid
+36,36,USSD,Paid
+37,37,USSD,Pending
+38,38,USSD,Paid
+39,39,Cash,Paid
+40,40,Bank Transfer,Paid
+41,41,USSD,Paid
+42,42,Card,Paid
+43,43,Bank Transfer,Pending
+44,44,USSD,Paid
+45,45,Cash,Pending
+46,46,Bank Transfer,Pending
+47,47,Wallet,Paid
+48,48,Cash,Paid
+49,49,USSD,Paid
+50,50,Card,Paid
+51,51,Bank Transfer,Paid
+52,52,Bank Transfer,Paid
+53,53,Card,Failed
+54,54,Wallet,Paid
+55,55,Card,Pending
+56,56,Wallet,Paid
+57,57,Card,Paid
+58,58,Cash,Paid
+59,59,Wallet,Paid
+60,60,USSD,Pending
+61,61,Bank Transfer,Paid
+62,62,Bank Transfer,Paid
+63,63,Card,Paid
+64,64,Card,Paid
+65,65,Bank Transfer,Paid
+66,66,Card,Paid
+67,67,Card,Pending
+68,68,Bank Transfer,Pending
+69,69,Card,Paid
+70,70,Card,Pending
+71,71,Cash,Paid
+72,72,Bank Transfer,Paid
+73,73,Wallet,Paid
+74,74,USSD,Paid
+75,75,Bank Transfer,Paid
+76,76,Cash,Paid
+77,77,USSD,Paid
+78,78,Card,Paid
+79,79,USSD,Paid
+80,80,Cash,Paid
+81,81,Cash,Paid
+82,82,Bank Transfer,Paid
+83,83,Wallet,Paid
+84,84,Card,Pending
+85,85,Wallet,Paid
+86,86,Card,Paid
+87,87,USSD,Paid
+88,88,Bank Transfer,Paid
+89,89,Cash,Refunded
+90,90,USSD,Paid
+91,91,Card,Paid
+92,92,Wallet,Paid
+93,93,Wallet,Paid
+94,94,Bank Transfer,Paid
+95,95,Card,Paid
+96,96,Wallet,Pending
+97,97,Card,Paid
+98,98,USSD,Pending
+99,99,Wallet,Paid
+100,100,Bank Transfer,Paid
+101,101,Cash,Paid
+102,102,USSD,Paid
+103,103,Card,Paid
+104,104,Wallet,Refunded
+105,105,USSD,Pending
+106,106,Cash,Paid
+107,107,Cash,Paid
+108,108,Card,Paid
+109,109,USSD,Paid
+110,110,Cash,Pending
+111,111,Bank Transfer,Pending
+112,112,Cash,Paid
+113,113,Bank Transfer,Paid
+114,114,Bank Transfer,Pending
+115,115,Bank Transfer,Paid
+116,116,USSD,Paid
+117,117,Bank Transfer,Paid
+118,118,Card,Paid
+119,119,USSD,Paid
+120,120,Bank Transfer,Paid
+121,121,Bank Transfer,Failed
+122,122,Bank Transfer,Paid
+123,123,Wallet,Paid
+124,124,Bank Transfer,Paid
+125,125,Card,Paid
+126,126,USSD,Paid
+127,127,Bank Transfer,Paid
+128,128,Bank Transfer,Paid
+129,129,Cash,Paid
+130,130,USSD,Refunded
+131,131,Bank Transfer,Paid
+132,132,USSD,Paid
+133,133,Cash,Paid
+134,134,Bank Transfer,Paid
+135,135,USSD,Paid
+136,136,USSD,Pending
+137,137,USSD,Paid
+138,138,USSD,Paid
+139,139,Card,Pending
+140,140,Cash,Paid
+141,141,Bank Transfer,Paid
+142,142,Bank Transfer,Paid
+143,143,USSD,Paid
+144,144,Cash,Paid
+145,145,Wallet,Paid
+146,146,Cash,Paid
+147,147,USSD,Paid
+148,148,Bank Transfer,Paid
+149,149,Wallet,Pending
+150,150,Cash,Paid
+151,151,USSD,Failed
+152,152,Cash,Paid
+153,153,Cash,Paid
+154,154,Wallet,Paid
+155,155,Card,Refunded
+156,156,Card,Paid
+157,157,Wallet,Paid
+158,158,USSD,Failed
+159,159,Cash,Paid
+160,160,USSD,Paid
+161,161,Cash,Paid
+162,162,USSD,Failed
+163,163,Bank Transfer,Paid
+164,164,Card,Failed
+165,165,Cash,Paid
+166,166,Card,Paid
+167,167,Bank Transfer,Paid
+168,168,USSD,Failed
+169,169,Bank Transfer,Paid
+170,170,Wallet,Paid
+171,171,Bank Transfer,Paid
+172,172,Card,Paid
+173,173,USSD,Paid
+174,174,Wallet,Refunded
+175,175,Card,Paid
+176,176,Bank Transfer,Pending
+177,177,Bank Transfer,Pending
+178,178,Cash,Paid
+179,179,Wallet,Refunded
+180,180,USSD,Paid
+181,181,USSD,Pending
+182,182,Card,Paid
+183,183,Wallet,Pending
+184,184,Cash,Pending
+185,185,Cash,Pending
+186,186,USSD,Paid
+187,187,Card,Refunded
+188,188,USSD,Paid
+189,189,Card,Pending
+190,190,USSD,Paid
+191,191,Cash,Pending
+192,192,Bank Transfer,Paid
+193,193,Bank Transfer,Pending
+194,194,Bank Transfer,Paid
+195,195,Wallet,Failed
+196,196,USSD,Paid
+197,197,Bank Transfer,Paid
+198,198,Card,Pending
+199,199,Bank Transfer,Paid
+200,200,USSD,Paid
+201,201,Wallet,Paid
+202,202,Bank Transfer,Paid
+203,203,Card,Paid
+204,204,Cash,Paid
+205,205,Card,Paid
+206,206,USSD,Paid
+207,207,Card,Paid
+208,208,Cash,Pending
+209,209,Card,Paid
+210,210,Card,Paid
+211,211,Wallet,Pending
+212,212,USSD,Paid
+213,213,Cash,Failed
+214,214,USSD,Pending
+215,215,Wallet,Paid
+216,216,Cash,Paid
+217,217,Cash,Refunded
+218,218,Bank Transfer,Failed
+219,219,USSD,Paid
+220,220,Card,Refunded
+221,221,Cash,Pending
+222,222,Card,Paid
+223,223,USSD,Pending
+224,224,Bank Transfer,Paid
+225,225,Card,Pending
+226,226,Cash,Failed
+227,227,Bank Transfer,Paid
+228,228,Wallet,Paid
+229,229,USSD,Paid
+230,230,Bank Transfer,Paid
+231,231,Cash,Paid
+232,232,Cash,Pending
+233,233,Cash,Paid
+234,234,Bank Transfer,Paid
+235,235,USSD,Pending
+236,236,Card,Paid
+237,237,USSD,Refunded
+238,238,Card,Pending
+239,239,Cash,Paid
+240,240,Bank Transfer,Pending
+241,241,Wallet,Pending
+242,242,Wallet,Paid
+243,243,USSD,Pending
+244,244,Cash,Pending
+245,245,Wallet,Refunded
+246,246,USSD,Paid
+247,247,USSD,Failed
+248,248,USSD,Paid
+249,249,Bank Transfer,Paid
+250,250,Bank Transfer,Pending
+251,251,Card,Paid
+252,252,Card,Paid
+253,253,Cash,Failed
+254,254,Cash,Paid
+255,255,Cash,Paid
+256,256,Card,Paid
+257,257,Wallet,Paid
+258,258,USSD,Paid
+259,259,Cash,Pending
+260,260,Wallet,Pending
+261,261,Wallet,Paid
+262,262,Cash,Paid
+263,263,USSD,Paid
+264,264,Wallet,Refunded
+265,265,USSD,Pending
+266,266,Bank Transfer,Paid
+267,267,Cash,Paid
+268,268,Card,Paid
+269,269,Wallet,Failed
+270,270,Card,Paid
+271,271,Bank Transfer,Pending
+272,272,USSD,Paid
+273,273,Card,Paid
+274,274,Wallet,Paid
+275,275,USSD,Refunded
+276,276,Cash,Pending
+277,277,Bank Transfer,Paid
+278,278,Wallet,Paid
+279,279,Card,Paid
+280,280,Wallet,Pending
+281,281,Cash,Paid
+282,282,Cash,Pending
+283,283,USSD,Paid
+284,284,Bank Transfer,Paid
+285,285,Bank Transfer,Pending
+286,286,Card,Paid
+287,287,Cash,Paid
+288,288,Card,Paid
+289,289,Wallet,Paid
+290,290,Bank Transfer,Paid
+291,291,USSD,Paid
+292,292,Cash,Paid
+293,293,Bank Transfer,Pending
+294,294,Bank Transfer,Pending
+295,295,Card,Failed
+296,296,Bank Transfer,Pending
+297,297,USSD,Paid
+298,298,Bank Transfer,Refunded
+299,299,Wallet,Paid
+300,300,USSD,Paid
+301,301,Cash,Pending
+302,302,USSD,Paid
+303,303,Cash,Paid
+304,304,Bank Transfer,Pending
+305,305,Wallet,Paid
+306,306,Bank Transfer,Paid
+307,307,Wallet,Pending
+308,308,Card,Pending
+309,309,Cash,Paid
+310,310,Bank Transfer,Paid
+311,311,USSD,Paid
+312,312,Cash,Failed
+313,313,Bank Transfer,Paid
+314,314,Bank Transfer,Pending
+315,315,Card,Paid
+316,316,Wallet,Paid
+317,317,Bank Transfer,Paid
+318,318,USSD,Paid
+319,319,Bank Transfer,Failed
+320,320,Card,Paid
+321,321,USSD,Paid
+322,322,Card,Paid
+323,323,Wallet,Paid
+324,324,Wallet,Paid
+325,325,Bank Transfer,Paid
+326,326,USSD,Paid
+327,327,Card,Paid
+328,328,USSD,Paid
+329,329,Wallet,Failed
+330,330,USSD,Pending
+331,331,Card,Pending
+332,332,USSD,Paid
+333,333,USSD,Paid
+334,334,Card,Paid
+335,335,Card,Paid
+336,336,Wallet,Paid
+337,337,Wallet,Paid
+338,338,Wallet,Paid
+339,339,Card,Pending
+340,340,Bank Transfer,Paid
+341,341,USSD,Paid
+342,342,Bank Transfer,Paid
+343,343,Card,Pending
+344,344,Wallet,Paid
+345,345,Card,Paid
+346,346,Wallet,Pending
+347,347,Wallet,Paid
+348,348,Wallet,Pending
+349,349,Wallet,Pending
+350,350,Card,Pending
+351,351,Bank Transfer,Refunded
+352,352,Card,Paid
+353,353,Wallet,Paid
+354,354,Card,Paid
+355,355,Cash,Paid
+356,356,Bank Transfer,Paid
+357,357,Bank Transfer,Paid
+358,358,Cash,Pending
+359,359,Card,Paid
+360,360,Card,Paid
+361,361,Cash,Refunded
+362,362,Bank Transfer,Paid
+363,363,Card,Paid
+364,364,Card,Failed
+365,365,Wallet,Failed
+366,366,Cash,Paid
+367,367,USSD,Paid
+368,368,USSD,Paid
+369,369,Wallet,Failed
+370,370,Cash,Paid
+371,371,Wallet,Paid
+372,372,Card,Paid
+373,373,Card,Paid
+374,374,Bank Transfer,Paid
+375,375,Bank Transfer,Failed
+376,376,Wallet,Paid
+377,377,Wallet,Paid
+378,378,Bank Transfer,Pending
+379,379,USSD,Paid
+380,380,Cash,Paid
+381,381,Bank Transfer,Paid
+382,382,Card,Failed
+383,383,USSD,Failed
+384,384,Bank Transfer,Paid
+385,385,Card,Paid
+386,386,Cash,Refunded
+387,387,Bank Transfer,Pending
+388,388,Wallet,Paid
+389,389,Wallet,Paid
+390,390,USSD,Pending
+391,391,Cash,Refunded
+392,392,USSD,Paid
+393,393,Wallet,Paid
+394,394,Cash,Paid
+395,395,Card,Paid
+396,396,USSD,Paid
+397,397,Card,Paid
+398,398,Cash,Pending
+399,399,Bank Transfer,Pending
+400,400,Bank Transfer,Paid
+401,401,Card,Paid
+402,402,Bank Transfer,Paid
+403,403,Card,Pending
+404,404,Card,Paid
+405,405,Cash,Paid
+406,406,USSD,Paid
+407,407,Cash,Pending
+408,408,Cash,Paid
+409,409,Wallet,Paid
+410,410,Card,Paid
+411,411,USSD,Paid
+412,412,Wallet,Paid
+413,413,USSD,Paid
+414,414,Bank Transfer,Paid
+415,415,Wallet,Pending
+416,416,Bank Transfer,Paid
+417,417,Wallet,Pending
+418,418,Card,Failed
+419,419,Cash,Pending
+420,420,Bank Transfer,Paid
+421,421,USSD,Pending
+422,422,Bank Transfer,Paid
+423,423,Cash,Pending
+424,424,Wallet,Paid
+425,425,USSD,Paid
+426,426,Bank Transfer,Paid
+427,427,Card,Failed
+428,428,USSD,Pending
+429,429,Card,Paid
+430,430,Card,Pending
+431,431,Card,Paid
+432,432,Card,Paid
+433,433,Cash,Paid
+434,434,USSD,Pending
+435,435,Card,Refunded
+436,436,USSD,Paid
+437,437,Bank Transfer,Paid
+438,438,Wallet,Paid
+439,439,Wallet,Paid
+440,440,USSD,Paid
+441,441,Bank Transfer,Failed
+442,442,Card,Pending
+443,443,Wallet,Pending
+444,444,Bank Transfer,Refunded
+445,445,Wallet,Paid
+446,446,Card,Paid
+447,447,Bank Transfer,Paid
+448,448,Wallet,Failed
+449,449,Bank Transfer,Paid
+450,450,Bank Transfer,Paid
+451,451,Card,Paid
+452,452,USSD,Paid
+453,453,Card,Paid
+454,454,Bank Transfer,Pending
+455,455,Card,Paid
+456,456,USSD,Paid
+457,457,Bank Transfer,Paid
+458,458,Wallet,Paid
+459,459,Cash,Failed
+460,460,Wallet,Pending
+461,461,Card,Failed
+462,462,Wallet,Pending
+463,463,Card,Paid
+464,464,Wallet,Paid
+465,465,Cash,Paid
+466,466,Card,Paid
+467,467,Bank Transfer,Paid
+468,468,Card,Paid
+469,469,USSD,Paid
+470,470,Wallet,Paid
+471,471,Bank Transfer,Paid
+472,472,USSD,Paid
+473,473,Cash,Paid
+474,474,USSD,Paid
+475,475,Cash,Paid
+476,476,Bank Transfer,Paid
+477,477,Cash,Paid
+478,478,USSD,Paid
+479,479,USSD,Paid
+480,480,Cash,Pending
+481,481,Card,Paid
+482,482,Bank Transfer,Paid
+483,483,Cash,Paid
+484,484,USSD,Paid
+485,485,Cash,Failed
+486,486,Bank Transfer,Paid
+487,487,USSD,Failed
+488,488,Cash,Paid
+489,489,USSD,Paid
+490,490,Bank Transfer,Paid
+491,491,USSD,Paid
+492,492,USSD,Paid
+493,493,Card,Pending
+494,494,Bank Transfer,Paid
+495,495,Wallet,Paid
+496,496,Bank Transfer,Paid
+497,497,Cash,Paid
+498,498,Wallet,Pending
+499,499,USSD,Paid
+500,500,Cash,Paid
+501,501,USSD,Paid
+502,502,Bank Transfer,Pending
+503,503,Bank Transfer,Paid
+504,504,Card,Pending
+505,505,Bank Transfer,Paid
+506,506,USSD,Paid
+507,507,Card,Pending
+508,508,Wallet,Paid
+509,509,Bank Transfer,Refunded
+510,510,Wallet,Paid
+511,511,Bank Transfer,Paid
+512,512,Bank Transfer,Paid
+513,513,Cash,Refunded
+514,514,Bank Transfer,Paid
+515,515,Wallet,Paid
+516,516,Card,Paid
+517,517,Wallet,Paid
+518,518,Bank Transfer,Paid
+519,519,USSD,Paid
+520,520,Wallet,Paid
+521,521,Card,Paid
+522,522,Cash,Paid
+523,523,Cash,Pending
+524,524,Bank Transfer,Paid
+525,525,Card,Paid
+526,526,Card,Paid
+527,527,Cash,Paid
+528,528,USSD,Paid
+529,529,Wallet,Paid
+530,530,Bank Transfer,Paid
+531,531,USSD,Paid
+532,532,Cash,Paid
+533,533,Card,Paid
+534,534,Bank Transfer,Paid
+535,535,Cash,Pending
+536,536,Wallet,Paid
+537,537,Cash,Paid
+538,538,Cash,Paid
+539,539,USSD,Paid
+540,540,Card,Paid
+541,541,Wallet,Paid
+542,542,Wallet,Refunded
+543,543,Bank Transfer,Paid
+544,544,USSD,Failed
+545,545,Card,Failed
+546,546,Wallet,Paid
+547,547,USSD,Refunded
+548,548,Bank Transfer,Paid
+549,549,Bank Transfer,Paid
+550,550,Bank Transfer,Paid
+551,551,Cash,Failed
+552,552,Wallet,Refunded
+553,553,Cash,Paid
+554,554,Card,Failed
+555,555,Card,Paid
+556,556,Wallet,Failed
+557,557,Wallet,Pending
+558,558,Bank Transfer,Paid
+559,559,Bank Transfer,Paid
+560,560,Wallet,Paid
+561,561,Bank Transfer,Pending
+562,562,USSD,Paid
+563,563,Wallet,Pending
+564,564,Card,Paid
+565,565,Wallet,Paid
+566,566,USSD,Paid
+567,567,Cash,Paid
+568,568,Card,Paid
+569,569,Bank Transfer,Paid
+570,570,Card,Pending
+571,571,Wallet,Paid
+572,572,Wallet,Paid
+573,573,Bank Transfer,Paid
+574,574,Cash,Paid
+575,575,Bank Transfer,Paid
+576,576,Wallet,Paid
+577,577,Card,Paid
+578,578,Cash,Failed
+579,579,Cash,Pending
+580,580,Card,Paid
+581,581,Bank Transfer,Refunded
+582,582,Bank Transfer,Paid
+583,583,Card,Paid
+584,584,Wallet,Refunded
+585,585,Cash,Paid
+586,586,Wallet,Paid
+587,587,Bank Transfer,Paid
+588,588,Wallet,Paid
+589,589,Card,Paid
+590,590,Card,Pending
+591,591,Bank Transfer,Pending
+592,592,Cash,Paid
+593,593,Card,Paid
+594,594,Wallet,Paid
+595,595,USSD,Failed
+596,596,Cash,Pending
+597,597,Wallet,Paid
+598,598,USSD,Paid
+599,599,Cash,Paid
+600,600,USSD,Paid

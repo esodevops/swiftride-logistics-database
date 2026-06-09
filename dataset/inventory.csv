@@ -1,0 +1,701 @@
+inventory_id,warehouse_id,product_name,quantity
+1,51,Router,1032
+2,244,Solar Panel,1429
+3,302,Desk Chair,900
+4,345,Cooking Oil,370
+5,182,Shoes,868
+6,110,Blender,466
+7,209,Cooking Oil,643
+8,64,Water Dispenser,225
+9,267,Printer,1015
+10,185,Television,1141
+11,21,Rice Bag,671
+12,253,Cooking Oil,788
+13,146,Water Dispenser,1229
+14,160,Water Dispenser,462
+15,284,Backpack,595
+16,220,Router,142
+17,244,Solar Panel,367
+18,7,Microwave,1376
+19,54,Shoes,897
+20,268,Rice Bag,244
+21,74,Shoes,820
+22,303,Cooking Oil,345
+23,34,Solar Panel,407
+24,174,Router,1218
+25,207,Cooking Oil,476
+26,218,Microwave,570
+27,298,Air Conditioner,559
+28,330,Shoes,729
+29,244,Office Table,828
+30,249,Blender,571
+31,76,Water Dispenser,221
+32,63,Headphones,1002
+33,255,Tablet,1286
+34,69,Laptop,203
+35,28,Rice Bag,1020
+36,348,Laptop,366
+37,196,Office Table,1391
+38,168,Printer,620
+39,319,Office Table,197
+40,40,Blender,1008
+41,239,Router,601
+42,339,Microwave,1004
+43,259,Headphones,1110
+44,176,Refrigerator,1119
+45,10,Phone,881
+46,61,Shoes,921
+47,162,Shoes,906
+48,236,Phone,67
+49,91,Refrigerator,1350
+50,156,Desk Chair,1006
+51,221,Printer,639
+52,200,Microwave,224
+53,292,Microwave,1351
+54,284,Refrigerator,1171
+55,241,Microwave,1151
+56,81,Blender,114
+57,201,Headphones,1013
+58,303,Shoes,1263
+59,347,Solar Panel,582
+60,165,Phone,57
+61,303,Phone,262
+62,188,Solar Panel,1195
+63,14,Generator,779
+64,50,Backpack,706
+65,183,Backpack,719
+66,29,Tablet,507
+67,121,Television,1213
+68,44,Rice Bag,624
+69,59,Generator,347
+70,11,Refrigerator,667
+71,20,Water Dispenser,1347
+72,217,Air Conditioner,1054
+73,216,Headphones,41
+74,241,Air Conditioner,45
+75,163,Shoes,1168
+76,200,Generator,1172
+77,51,Microwave,204
+78,346,Router,688
+79,255,Blender,1366
+80,174,Desk Chair,1259
+81,154,Solar Panel,892
+82,104,Microwave,1301
+83,39,Refrigerator,438
+84,148,Headphones,97
+85,153,Air Conditioner,823
+86,116,Office Table,188
+87,297,Cooking Oil,1212
+88,173,Headphones,137
+89,291,Blender,973
+90,219,Router,711
+91,40,Television,1033
+92,154,Backpack,1358
+93,277,Generator,409
+94,213,Shoes,514
+95,320,Blender,928
+96,344,Refrigerator,369
+97,10,Blender,382
+98,296,Microwave,436
+99,339,Water Dispenser,548
+100,327,Refrigerator,1258
+101,223,Air Conditioner,1488
+102,321,Phone,1069
+103,103,Solar Panel,947
+104,76,Tablet,308
+105,154,Backpack,840
+106,164,Rice Bag,1298
+107,105,Backpack,546
+108,147,Desk Chair,525
+109,308,Tablet,831
+110,123,Cooking Oil,307
+111,99,Laptop,502
+112,159,Water Dispenser,994
+113,287,Backpack,864
+114,332,Phone,413
+115,82,Headphones,279
+116,15,Headphones,568
+117,338,Refrigerator,360
+118,330,Phone,1479
+119,249,Laptop,113
+120,43,Generator,1232
+121,153,Rice Bag,833
+122,187,Rice Bag,812
+123,72,Tablet,229
+124,293,Blender,247
+125,268,Air Conditioner,1075
+126,129,Microwave,184
+127,122,Office Table,250
+128,161,Generator,1196
+129,200,Tablet,866
+130,112,Printer,218
+131,90,Router,562
+132,226,Backpack,520
+133,302,Phone,1004
+134,274,Solar Panel,1432
+135,58,Generator,1117
+136,217,Microwave,1398
+137,127,Headphones,296
+138,186,Microwave,1465
+139,189,Television,43
+140,331,Office Table,71
+141,340,Phone,1414
+142,344,Tablet,518
+143,283,Shoes,633
+144,328,Solar Panel,1403
+145,63,Refrigerator,484
+146,227,Shoes,16
+147,202,Headphones,616
+148,47,Tablet,609
+149,108,Desk Chair,898
+150,324,Generator,1319
+151,209,Phone,561
+152,42,Microwave,964
+153,212,Generator,1469
+154,217,Cooking Oil,328
+155,134,Blender,135
+156,181,Backpack,1233
+157,281,Generator,928
+158,15,Phone,1313
+159,329,Desk Chair,1290
+160,228,Printer,6
+161,206,Router,1286
+162,157,Generator,1179
+163,43,Cooking Oil,323
+164,128,Blender,1461
+165,333,Printer,1216
+166,211,Generator,924
+167,245,Printer,533
+168,89,Air Conditioner,670
+169,145,Router,172
+170,213,Solar Panel,372
+171,202,Shoes,1168
+172,115,Laptop,47
+173,286,Office Table,1283
+174,118,Rice Bag,947
+175,102,Headphones,1436
+176,87,Phone,821
+177,317,Backpack,1229
+178,134,Printer,182
+179,189,Desk Chair,1161
+180,61,Laptop,1471
+181,270,Backpack,929
+182,345,Microwave,242
+183,115,Router,390
+184,137,Television,1012
+185,196,Printer,883
+186,106,Office Table,441
+187,145,Router,856
+188,93,Backpack,298
+189,15,Television,536
+190,121,Office Table,923
+191,128,Solar Panel,1193
+192,332,Water Dispenser,175
+193,6,Microwave,272
+194,166,Shoes,1406
+195,109,Shoes,1450
+196,217,Office Table,524
+197,38,Cooking Oil,1140
+198,31,Phone,681
+199,121,Microwave,725
+200,311,Office Table,1453
+201,24,Laptop,519
+202,259,Office Table,780
+203,155,Shoes,1374
+204,190,Printer,1145
+205,22,Air Conditioner,367
+206,134,Desk Chair,1031
+207,253,Generator,958
+208,68,Rice Bag,649
+209,272,Backpack,290
+210,134,Cooking Oil,641
+211,23,Printer,1022
+212,144,Solar Panel,880
+213,145,Headphones,1255
+214,136,Blender,641
+215,224,Desk Chair,646
+216,252,Printer,1138
+217,337,Water Dispenser,108
+218,97,Printer,111
+219,118,Desk Chair,73
+220,241,Headphones,334
+221,240,Backpack,237
+222,254,Phone,904
+223,183,Refrigerator,993
+224,235,Microwave,230
+225,76,Cooking Oil,715
+226,48,Router,581
+227,93,Desk Chair,1041
+228,140,Air Conditioner,1358
+229,300,Router,1195
+230,3,Blender,1168
+231,93,Backpack,157
+232,127,Microwave,1386
+233,49,Generator,53
+234,146,Cooking Oil,807
+235,192,Air Conditioner,217
+236,166,Printer,59
+237,42,Water Dispenser,1449
+238,338,Microwave,929
+239,322,Headphones,1216
+240,337,Laptop,674
+241,23,Office Table,927
+242,167,Air Conditioner,264
+243,109,Phone,1318
+244,145,Generator,113
+245,37,Refrigerator,1233
+246,196,Rice Bag,816
+247,131,Desk Chair,491
+248,205,Rice Bag,42
+249,107,Desk Chair,795
+250,207,Television,1325
+251,335,Printer,246
+252,153,Microwave,885
+253,159,Office Table,268
+254,184,Cooking Oil,752
+255,263,Router,1002
+256,229,Shoes,975
+257,138,Air Conditioner,1229
+258,217,Rice Bag,865
+259,189,Office Table,381
+260,223,Backpack,190
+261,21,Blender,699
+262,238,Tablet,1326
+263,80,Microwave,1079
+264,323,Blender,171
+265,149,Water Dispenser,895
+266,41,Microwave,615
+267,77,Printer,1401
+268,154,Tablet,1071
+269,219,Television,1164
+270,25,Refrigerator,156
+271,24,Blender,220
+272,262,Backpack,845
+273,49,Water Dispenser,1353
+274,292,Headphones,727
+275,131,Air Conditioner,167
+276,258,Laptop,233
+277,339,Water Dispenser,367
+278,94,Shoes,92
+279,43,Backpack,1442
+280,153,Generator,1202
+281,233,Water Dispenser,1277
+282,136,Generator,383
+283,109,Desk Chair,160
+284,310,Headphones,1379
+285,55,Backpack,1094
+286,10,Laptop,808
+287,60,Laptop,351
+288,336,Microwave,942
+289,208,Office Table,1486
+290,250,Television,1266
+291,316,Solar Panel,1414
+292,345,Shoes,619
+293,45,Printer,276
+294,8,Router,229
+295,9,Router,54
+296,108,Microwave,1328
+297,75,Tablet,892
+298,321,Refrigerator,390
+299,45,Television,949
+300,76,Microwave,864
+301,12,Cooking Oil,340
+302,79,Water Dispenser,993
+303,242,Laptop,920
+304,300,Tablet,412
+305,151,Air Conditioner,802
+306,27,Generator,16
+307,53,Backpack,851
+308,254,Air Conditioner,1220
+309,284,Television,75
+310,250,Shoes,995
+311,263,Air Conditioner,1484
+312,314,Microwave,474
+313,32,Blender,38
+314,217,Air Conditioner,646
+315,284,Rice Bag,548
+316,332,Backpack,969
+317,60,Microwave,1275
+318,331,Solar Panel,918
+319,224,Laptop,330
+320,148,Router,961
+321,177,Water Dispenser,475
+322,260,Tablet,1203
+323,174,Office Table,1464
+324,337,Water Dispenser,268
+325,151,Shoes,853
+326,345,Solar Panel,967
+327,83,Office Table,424
+328,145,Rice Bag,1366
+329,248,Printer,354
+330,103,Desk Chair,1240
+331,252,Cooking Oil,851
+332,253,Television,480
+333,108,Refrigerator,96
+334,10,Solar Panel,534
+335,183,Desk Chair,357
+336,258,Phone,130
+337,173,Backpack,233
+338,317,Tablet,247
+339,288,Tablet,996
+340,133,Generator,727
+341,24,Refrigerator,547
+342,78,Blender,1237
+343,343,Cooking Oil,1446
+344,26,Water Dispenser,936
+345,57,Cooking Oil,1250
+346,313,Cooking Oil,1151
+347,22,Blender,215
+348,86,Cooking Oil,420
+349,186,Desk Chair,1491
+350,150,Water Dispenser,1036
+351,256,Cooking Oil,315
+352,332,Solar Panel,685
+353,71,Cooking Oil,413
+354,225,Backpack,13
+355,126,Microwave,699
+356,147,Blender,350
+357,44,Headphones,762
+358,213,Solar Panel,1289
+359,341,Tablet,310
+360,272,Backpack,467
+361,71,Backpack,846
+362,210,Water Dispenser,1057
+363,350,Solar Panel,60
+364,227,Printer,20
+365,265,Rice Bag,173
+366,174,Generator,822
+367,85,Backpack,125
+368,202,Phone,1352
+369,329,Printer,1176
+370,30,Blender,605
+371,215,Shoes,1394
+372,284,Television,1477
+373,161,Solar Panel,16
+374,144,Blender,1250
+375,76,Shoes,913
+376,330,Router,1114
+377,320,Office Table,1335
+378,227,Solar Panel,1328
+379,208,Router,617
+380,44,Phone,1100
+381,172,Shoes,1485
+382,65,Blender,1107
+383,146,Router,190
+384,262,Refrigerator,639
+385,267,Generator,1301
+386,82,Laptop,57
+387,277,Air Conditioner,529
+388,124,Television,1487
+389,217,Blender,226
+390,31,Solar Panel,531
+391,322,Blender,725
+392,64,Phone,1333
+393,64,Water Dispenser,610
+394,294,Laptop,928
+395,174,Tablet,1191
+396,290,Refrigerator,1219
+397,120,Solar Panel,612
+398,146,Air Conditioner,1377
+399,72,Shoes,1064
+400,127,Cooking Oil,671
+401,265,Air Conditioner,394
+402,185,Water Dispenser,200
+403,76,Backpack,843
+404,42,Rice Bag,127
+405,218,Printer,975
+406,110,Water Dispenser,159
+407,190,Blender,824
+408,302,Refrigerator,1062
+409,203,Headphones,1196
+410,256,Backpack,901
+411,251,Backpack,333
+412,74,Blender,260
+413,249,Water Dispenser,264
+414,263,Blender,241
+415,109,Water Dispenser,969
+416,17,Desk Chair,1144
+417,190,Cooking Oil,1232
+418,210,Cooking Oil,247
+419,190,Air Conditioner,593
+420,21,Blender,313
+421,61,Solar Panel,624
+422,192,Television,602
+423,249,Laptop,292
+424,73,Air Conditioner,863
+425,25,Television,580
+426,111,Desk Chair,1001
+427,2,Cooking Oil,1121
+428,179,Rice Bag,91
+429,214,Microwave,1173
+430,159,Air Conditioner,926
+431,173,Shoes,973
+432,311,Printer,283
+433,259,Water Dispenser,921
+434,342,Water Dispenser,305
+435,167,Rice Bag,1279
+436,341,Office Table,838
+437,199,Tablet,809
+438,174,Refrigerator,93
+439,344,Water Dispenser,568
+440,331,Rice Bag,339
+441,13,Air Conditioner,1290
+442,159,Refrigerator,1321
+443,64,Refrigerator,174
+444,99,Office Table,1109
+445,296,Phone,1167
+446,268,Router,974
+447,258,Laptop,246
+448,338,Refrigerator,368
+449,10,Headphones,421
+450,126,Air Conditioner,909
+451,44,Refrigerator,1242
+452,165,Shoes,1206
+453,24,Microwave,47
+454,175,Backpack,369
+455,213,Laptop,1081
+456,163,Shoes,526
+457,47,Cooking Oil,203
+458,278,Desk Chair,584
+459,74,Desk Chair,523
+460,46,Printer,628
+461,209,Desk Chair,120
+462,315,Generator,371
+463,14,Phone,610
+464,200,Cooking Oil,655
+465,73,Backpack,663
+466,133,Shoes,247
+467,27,Router,490
+468,306,Air Conditioner,484
+469,253,Blender,1033
+470,198,Cooking Oil,551
+471,32,Generator,951
+472,284,Backpack,134
+473,248,Laptop,834
+474,325,Tablet,38
+475,138,Refrigerator,1200
+476,346,Cooking Oil,504
+477,285,Printer,623
+478,291,Backpack,913
+479,43,Blender,416
+480,73,Solar Panel,1106
+481,87,Tablet,1100
+482,217,Refrigerator,925
+483,22,Laptop,951
+484,318,Television,1337
+485,86,Laptop,123
+486,247,Headphones,1224
+487,129,Shoes,719
+488,324,Router,1198
+489,262,Television,93
+490,83,Refrigerator,1153
+491,36,Television,183
+492,203,Cooking Oil,286
+493,285,Headphones,884
+494,108,Office Table,1033
+495,163,Generator,1300
+496,134,Water Dispenser,559
+497,126,Generator,699
+498,108,Water Dispenser,1227
+499,169,Laptop,1416
+500,69,Laptop,1246
+501,244,Laptop,19
+502,345,Desk Chair,846
+503,285,Microwave,804
+504,276,Rice Bag,1329
+505,334,Rice Bag,1103
+506,16,Water Dispenser,1376
+507,64,Solar Panel,770
+508,308,Solar Panel,792
+509,91,Laptop,255
+510,237,Solar Panel,395
+511,228,Laptop,453
+512,11,Headphones,1393
+513,184,Router,184
+514,315,Television,1470
+515,114,Tablet,1011
+516,186,Phone,574
+517,253,Office Table,428
+518,4,Router,1307
+519,203,Cooking Oil,568
+520,292,Blender,1011
+521,88,Refrigerator,396
+522,338,Air Conditioner,1376
+523,350,Office Table,1157
+524,90,Rice Bag,1204
+525,66,Rice Bag,260
+526,133,Air Conditioner,466
+527,268,Headphones,392
+528,348,Laptop,1419
+529,348,Refrigerator,1258
+530,130,Refrigerator,929
+531,2,Backpack,1312
+532,345,Phone,661
+533,222,Backpack,561
+534,63,Blender,955
+535,254,Solar Panel,1059
+536,23,Tablet,96
+537,143,Backpack,1090
+538,230,Generator,10
+539,201,Router,685
+540,42,Air Conditioner,51
+541,116,Backpack,152
+542,128,Router,336
+543,169,Television,128
+544,321,Cooking Oil,57
+545,246,Backpack,49
+546,304,Generator,512
+547,127,Cooking Oil,969
+548,123,Generator,111
+549,171,Blender,484
+550,38,Office Table,1268
+551,225,Cooking Oil,1280
+552,229,Air Conditioner,255
+553,44,Phone,68
+554,194,Generator,1420
+555,34,Printer,126
+556,227,Phone,617
+557,313,Backpack,134
+558,53,Phone,1145
+559,27,Television,781
+560,206,Cooking Oil,1264
+561,211,Tablet,1227
+562,338,Office Table,21
+563,233,Shoes,950
+564,220,Office Table,1268
+565,52,Generator,1333
+566,346,Laptop,929
+567,265,Generator,1203
+568,99,Cooking Oil,210
+569,7,Office Table,1460
+570,35,Air Conditioner,396
+571,294,Printer,1305
+572,261,Headphones,727
+573,216,Microwave,1484
+574,318,Water Dispenser,380
+575,125,Printer,90
+576,31,Printer,638
+577,300,Backpack,1050
+578,334,Solar Panel,637
+579,299,Refrigerator,298
+580,76,Microwave,632
+581,309,Generator,596
+582,189,Laptop,1060
+583,301,Printer,117
+584,122,Blender,1145
+585,28,Backpack,704
+586,101,Router,1311
+587,104,Rice Bag,699
+588,97,Microwave,1422
+589,240,Office Table,1418
+590,170,Air Conditioner,1159
+591,172,Office Table,613
+592,215,Generator,332
+593,54,Water Dispenser,86
+594,254,Tablet,7
+595,328,Tablet,1419
+596,118,Water Dispenser,1277
+597,110,Tablet,984
+598,170,Shoes,420
+599,205,Desk Chair,13
+600,186,Laptop,151
+601,184,Laptop,1136
+602,59,Printer,595
+603,226,Router,1292
+604,300,Solar Panel,89
+605,16,Router,405
+606,146,Desk Chair,448
+607,135,Desk Chair,695
+608,284,Tablet,365
+609,101,Laptop,360
+610,135,Cooking Oil,42
+611,347,Printer,776
+612,336,Cooking Oil,693
+613,108,Television,934
+614,123,Solar Panel,762
+615,339,Desk Chair,1079
+616,320,Backpack,1456
+617,34,Cooking Oil,295
+618,67,Router,392
+619,273,Shoes,1422
+620,192,Generator,1227
+621,220,Tablet,94
+622,316,Air Conditioner,387
+623,275,Television,304
+624,168,Tablet,109
+625,323,Headphones,258
+626,261,Air Conditioner,1001
+627,108,Rice Bag,963
+628,340,Office Table,132
+629,86,Blender,794
+630,331,Blender,766
+631,256,Blender,950
+632,92,Generator,1459
+633,192,Blender,1422
+634,248,Microwave,970
+635,138,Air Conditioner,821
+636,327,Air Conditioner,1330
+637,19,Router,449
+638,104,Water Dispenser,480
+639,203,Router,626
+640,218,Shoes,1170
+641,81,Solar Panel,521
+642,282,Rice Bag,275
+643,44,Television,910
+644,266,Solar Panel,471
+645,299,Phone,952
+646,263,Office Table,688
+647,219,Water Dispenser,957
+648,222,Backpack,752
+649,255,Generator,559
+650,196,Laptop,367
+651,227,Tablet,543
+652,331,Rice Bag,735
+653,43,Television,1027
+654,263,Refrigerator,1318
+655,41,Headphones,466
+656,51,Cooking Oil,146
+657,185,Phone,1118
+658,103,Generator,402
+659,346,Generator,512
+660,155,Headphones,390
+661,310,Printer,1466
+662,279,Headphones,17
+663,154,Television,709
+664,207,Shoes,1187
+665,336,Laptop,966
+666,335,Blender,305
+667,204,Tablet,464
+668,108,Microwave,478
+669,265,Air Conditioner,1131
+670,240,Water Dispenser,697
+671,44,Generator,384
+672,220,Backpack,429
+673,225,Water Dispenser,1143
+674,16,Solar Panel,284
+675,296,Printer,625
+676,5,Microwave,1349
+677,182,Generator,461
+678,215,Backpack,1404
+679,207,Refrigerator,613
+680,167,Air Conditioner,47
+681,291,Phone,284
+682,79,Generator,1163
+683,323,Office Table,1244
+684,294,Shoes,780
+685,105,Shoes,130
+686,274,Shoes,385
+687,244,Cooking Oil,673
+688,292,Water Dispenser,1308
+689,156,Rice Bag,351
+690,54,Refrigerator,363
+691,17,Office Table,1000
+692,14,Desk Chair,407
+693,36,Shoes,581
+694,106,Tablet,596
+695,338,Blender,143
+696,233,Phone,754
+697,266,Laptop,351
+698,168,Backpack,800
+699,81,Cooking Oil,264
+700,275,Backpack,979

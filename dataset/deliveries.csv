@@ -1,0 +1,601 @@
+delivery_id,order_id,driver_id,vehicle_id,delivery_status
+1,1,77,168,Delivered
+2,2,114,79,Pending
+3,3,202,229,Delivered
+4,4,295,259,Pending
+5,5,222,149,Delivered
+6,6,76,68,In Transit
+7,7,244,293,Delivered
+8,8,281,205,In Transit
+9,9,205,257,In Transit
+10,10,358,67,Delivered
+11,11,247,287,Assigned
+12,12,203,334,Delivered
+13,13,288,316,Returned
+14,14,269,127,Assigned
+15,15,137,221,In Transit
+16,16,295,46,Assigned
+17,17,212,217,In Transit
+18,18,98,165,In Transit
+19,19,336,13,Delivered
+20,20,87,180,Delivered
+21,21,227,320,Assigned
+22,22,23,120,Assigned
+23,23,192,80,Delivered
+24,24,44,58,Delivered
+25,25,125,318,Failed
+26,26,148,8,In Transit
+27,27,57,157,In Transit
+28,28,12,170,Assigned
+29,29,276,109,Assigned
+30,30,268,133,Delivered
+31,31,319,73,Delivered
+32,32,343,10,In Transit
+33,33,340,270,Pending
+34,34,88,31,In Transit
+35,35,357,317,In Transit
+36,36,239,336,Failed
+37,37,35,199,Delivered
+38,38,340,338,In Transit
+39,39,56,10,In Transit
+40,40,333,198,Assigned
+41,41,195,261,Returned
+42,42,51,162,In Transit
+43,43,306,273,Pending
+44,44,102,257,Returned
+45,45,288,12,Pending
+46,46,272,157,In Transit
+47,47,202,81,Pending
+48,48,351,181,In Transit
+49,49,155,121,Returned
+50,50,257,142,Delivered
+51,51,321,132,Delivered
+52,52,16,285,Failed
+53,53,116,78,In Transit
+54,54,202,337,Assigned
+55,55,196,267,Returned
+56,56,314,321,Delivered
+57,57,214,124,Delivered
+58,58,219,160,Failed
+59,59,169,230,Delivered
+60,60,106,335,Assigned
+61,61,278,104,Delivered
+62,62,159,269,Failed
+63,63,221,75,Delivered
+64,64,290,81,In Transit
+65,65,286,273,Failed
+66,66,61,95,In Transit
+67,67,75,16,Delivered
+68,68,212,211,In Transit
+69,69,327,141,Assigned
+70,70,97,55,Assigned
+71,71,14,314,Delivered
+72,72,311,291,Delivered
+73,73,306,119,Assigned
+74,74,14,184,Pending
+75,75,245,69,Delivered
+76,76,310,241,Delivered
+77,77,192,95,Delivered
+78,78,252,243,Assigned
+79,79,99,116,Pending
+80,80,8,139,Returned
+81,81,114,344,Returned
+82,82,105,34,Assigned
+83,83,225,316,In Transit
+84,84,167,235,Delivered
+85,85,219,208,Delivered
+86,86,312,195,Delivered
+87,87,202,314,Failed
+88,88,293,305,Delivered
+89,89,329,20,Delivered
+90,90,232,234,Delivered
+91,91,22,126,Delivered
+92,92,203,21,Delivered
+93,93,265,323,Returned
+94,94,98,150,In Transit
+95,95,156,147,In Transit
+96,96,217,151,Delivered
+97,97,28,265,Failed
+98,98,238,331,In Transit
+99,99,257,58,Assigned
+100,100,300,280,Assigned
+101,101,212,166,In Transit
+102,102,92,233,Delivered
+103,103,104,233,Pending
+104,104,166,333,Failed
+105,105,84,64,Pending
+106,106,231,325,In Transit
+107,107,269,197,Delivered
+108,108,262,314,Failed
+109,109,194,282,In Transit
+110,110,88,172,Delivered
+111,111,338,77,Assigned
+112,112,75,92,Delivered
+113,113,27,215,In Transit
+114,114,229,148,Delivered
+115,115,61,68,Returned
+116,116,2,319,Delivered
+117,117,7,235,In Transit
+118,118,256,279,Delivered
+119,119,312,253,Assigned
+120,120,302,338,In Transit
+121,121,210,227,Pending
+122,122,308,4,Assigned
+123,123,281,143,Delivered
+124,124,286,107,Pending
+125,125,76,29,Delivered
+126,126,19,75,Delivered
+127,127,342,296,Delivered
+128,128,153,170,Failed
+129,129,26,56,In Transit
+130,130,92,83,Delivered
+131,131,313,339,Delivered
+132,132,305,294,Delivered
+133,133,91,234,Delivered
+134,134,185,19,Pending
+135,135,154,166,In Transit
+136,136,195,35,Delivered
+137,137,282,34,In Transit
+138,138,69,63,Delivered
+139,139,141,169,Delivered
+140,140,269,108,Delivered
+141,141,314,30,Assigned
+142,142,323,271,Returned
+143,143,248,310,Failed
+144,144,148,219,Delivered
+145,145,163,133,Delivered
+146,146,320,182,Failed
+147,147,315,289,In Transit
+148,148,324,255,In Transit
+149,149,93,313,Assigned
+150,150,149,100,Pending
+151,151,13,239,Delivered
+152,152,61,107,Delivered
+153,153,213,212,Pending
+154,154,180,287,Delivered
+155,155,109,6,Delivered
+156,156,354,145,In Transit
+157,157,35,158,In Transit
+158,158,282,166,Delivered
+159,159,59,171,In Transit
+160,160,292,316,Returned
+161,161,90,100,In Transit
+162,162,174,345,In Transit
+163,163,243,19,Delivered
+164,164,247,80,Delivered
+165,165,275,172,In Transit
+166,166,212,29,Delivered
+167,167,154,290,Delivered
+168,168,162,285,Delivered
+169,169,107,296,Delivered
+170,170,182,34,Returned
+171,171,144,16,In Transit
+172,172,193,321,Delivered
+173,173,85,293,Delivered
+174,174,96,305,Assigned
+175,175,158,162,Delivered
+176,176,140,212,Pending
+177,177,122,191,In Transit
+178,178,155,111,Delivered
+179,179,90,58,In Transit
+180,180,20,104,Failed
+181,181,228,260,Pending
+182,182,248,257,Assigned
+183,183,175,248,Delivered
+184,184,269,159,Delivered
+185,185,74,51,Delivered
+186,186,265,347,Returned
+187,187,106,19,In Transit
+188,188,268,60,Pending
+189,189,23,305,Delivered
+190,190,171,240,Delivered
+191,191,53,267,Delivered
+192,192,160,12,Delivered
+193,193,160,328,Delivered
+194,194,165,103,Assigned
+195,195,142,273,In Transit
+196,196,226,344,Assigned
+197,197,77,81,In Transit
+198,198,8,319,Delivered
+199,199,53,106,Delivered
+200,200,282,164,In Transit
+201,201,146,294,Assigned
+202,202,37,160,Delivered
+203,203,174,277,In Transit
+204,204,67,15,In Transit
+205,205,346,26,Assigned
+206,206,28,45,In Transit
+207,207,92,306,Delivered
+208,208,323,229,Delivered
+209,209,160,171,Delivered
+210,210,344,274,Pending
+211,211,239,291,Assigned
+212,212,358,240,Pending
+213,213,159,330,Delivered
+214,214,239,241,Assigned
+215,215,115,74,Delivered
+216,216,316,133,Failed
+217,217,201,94,Delivered
+218,218,341,170,Delivered
+219,219,167,233,In Transit
+220,220,34,244,Assigned
+221,221,246,237,Delivered
+222,222,145,179,Delivered
+223,223,66,261,Assigned
+224,224,55,167,Delivered
+225,225,37,155,Delivered
+226,226,206,303,In Transit
+227,227,318,125,Delivered
+228,228,247,197,Pending
+229,229,107,303,In Transit
+230,230,223,291,Delivered
+231,231,279,121,Assigned
+232,232,343,40,Delivered
+233,233,294,250,Assigned
+234,234,306,238,In Transit
+235,235,50,228,Assigned
+236,236,208,36,Delivered
+237,237,351,306,Delivered
+238,238,195,168,In Transit
+239,239,339,32,Pending
+240,240,72,298,Failed
+241,241,326,1,Delivered
+242,242,339,77,In Transit
+243,243,150,200,Delivered
+244,244,229,101,Assigned
+245,245,163,154,Delivered
+246,246,348,156,Failed
+247,247,223,177,Returned
+248,248,299,5,Delivered
+249,249,262,207,Delivered
+250,250,151,32,In Transit
+251,251,282,28,Pending
+252,252,287,184,Assigned
+253,253,145,16,Assigned
+254,254,360,303,In Transit
+255,255,163,196,In Transit
+256,256,223,280,Assigned
+257,257,89,244,Assigned
+258,258,285,197,Delivered
+259,259,185,214,Assigned
+260,260,344,65,Assigned
+261,261,37,332,Pending
+262,262,250,337,In Transit
+263,263,70,44,Assigned
+264,264,213,234,Delivered
+265,265,357,310,Failed
+266,266,320,93,In Transit
+267,267,218,283,Delivered
+268,268,197,182,Assigned
+269,269,218,310,Pending
+270,270,256,122,Delivered
+271,271,138,211,Failed
+272,272,296,188,Pending
+273,273,20,291,In Transit
+274,274,189,58,Delivered
+275,275,354,41,Assigned
+276,276,270,144,In Transit
+277,277,41,268,Delivered
+278,278,46,126,In Transit
+279,279,340,343,Pending
+280,280,325,277,Delivered
+281,281,160,314,Pending
+282,282,176,274,Delivered
+283,283,241,233,Delivered
+284,284,241,294,Delivered
+285,285,216,181,Returned
+286,286,151,149,Assigned
+287,287,356,306,Delivered
+288,288,289,134,Pending
+289,289,243,297,Assigned
+290,290,27,337,Returned
+291,291,320,14,In Transit
+292,292,43,65,Delivered
+293,293,143,130,Assigned
+294,294,144,141,Delivered
+295,295,8,58,Delivered
+296,296,303,78,Delivered
+297,297,190,90,In Transit
+298,298,359,121,In Transit
+299,299,271,17,In Transit
+300,300,44,75,Delivered
+301,301,79,254,Delivered
+302,302,212,197,Assigned
+303,303,226,327,Assigned
+304,304,296,177,Pending
+305,305,136,60,Pending
+306,306,238,205,In Transit
+307,307,244,273,Assigned
+308,308,350,200,In Transit
+309,309,75,272,Delivered
+310,310,7,148,Failed
+311,311,230,196,Delivered
+312,312,272,350,Returned
+313,313,50,273,Delivered
+314,314,222,313,Failed
+315,315,140,172,In Transit
+316,316,51,131,Delivered
+317,317,201,237,Delivered
+318,318,124,345,Delivered
+319,319,100,267,In Transit
+320,320,354,93,In Transit
+321,321,6,345,Pending
+322,322,35,7,In Transit
+323,323,269,54,Delivered
+324,324,180,113,Delivered
+325,325,129,99,Pending
+326,326,318,48,Pending
+327,327,305,337,Delivered
+328,328,112,307,Delivered
+329,329,62,45,Delivered
+330,330,67,193,Delivered
+331,331,332,290,Delivered
+332,332,95,57,Delivered
+333,333,130,151,In Transit
+334,334,39,328,In Transit
+335,335,142,219,Delivered
+336,336,342,166,In Transit
+337,337,38,142,Delivered
+338,338,196,199,In Transit
+339,339,31,133,Returned
+340,340,136,92,In Transit
+341,341,252,103,Delivered
+342,342,92,331,In Transit
+343,343,74,277,Delivered
+344,344,112,315,Delivered
+345,345,227,133,Assigned
+346,346,38,37,Delivered
+347,347,129,229,Pending
+348,348,255,77,Delivered
+349,349,1,20,Delivered
+350,350,137,78,Delivered
+351,351,201,295,Pending
+352,352,252,245,In Transit
+353,353,36,277,Assigned
+354,354,197,247,Assigned
+355,355,275,184,In Transit
+356,356,156,206,Pending
+357,357,332,47,In Transit
+358,358,175,42,Delivered
+359,359,149,332,Assigned
+360,360,284,21,Returned
+361,361,339,98,In Transit
+362,362,200,55,Delivered
+363,363,184,250,Pending
+364,364,324,225,Delivered
+365,365,72,19,Assigned
+366,366,304,123,In Transit
+367,367,33,277,Delivered
+368,368,256,274,Returned
+369,369,231,9,Pending
+370,370,29,173,Delivered
+371,371,22,208,Assigned
+372,372,335,342,Delivered
+373,373,348,275,Assigned
+374,374,297,120,Failed
+375,375,19,73,In Transit
+376,376,10,242,Failed
+377,377,317,24,Assigned
+378,378,333,67,Pending
+379,379,324,26,Failed
+380,380,50,234,Delivered
+381,381,303,33,Delivered
+382,382,55,59,In Transit
+383,383,316,113,Pending
+384,384,104,219,In Transit
+385,385,348,206,In Transit
+386,386,351,295,Delivered
+387,387,165,110,Delivered
+388,388,304,89,In Transit
+389,389,62,141,Assigned
+390,390,213,87,Delivered
+391,391,284,85,In Transit
+392,392,298,21,Assigned
+393,393,324,314,In Transit
+394,394,81,9,Delivered
+395,395,42,4,Pending
+396,396,46,334,Delivered
+397,397,146,214,Delivered
+398,398,244,65,Assigned
+399,399,328,139,Delivered
+400,400,211,123,Failed
+401,401,313,20,Delivered
+402,402,256,314,Returned
+403,403,322,155,In Transit
+404,404,3,286,Assigned
+405,405,61,272,Returned
+406,406,317,186,Delivered
+407,407,277,260,Assigned
+408,408,321,338,Assigned
+409,409,28,100,Assigned
+410,410,77,243,In Transit
+411,411,82,344,Failed
+412,412,28,331,In Transit
+413,413,108,223,In Transit
+414,414,316,233,Pending
+415,415,27,276,Assigned
+416,416,15,249,Delivered
+417,417,37,121,Delivered
+418,418,304,297,In Transit
+419,419,102,347,Delivered
+420,420,118,57,In Transit
+421,421,51,122,Delivered
+422,422,103,193,Delivered
+423,423,38,242,Delivered
+424,424,28,224,Assigned
+425,425,313,233,Assigned
+426,426,192,70,In Transit
+427,427,100,324,In Transit
+428,428,139,104,In Transit
+429,429,17,292,Pending
+430,430,70,57,Delivered
+431,431,235,215,Assigned
+432,432,176,113,Delivered
+433,433,310,81,Delivered
+434,434,327,314,Failed
+435,435,296,284,Delivered
+436,436,45,211,Delivered
+437,437,251,111,Delivered
+438,438,237,143,Pending
+439,439,220,127,Assigned
+440,440,223,297,Assigned
+441,441,303,77,Failed
+442,442,3,214,Returned
+443,443,21,241,Delivered
+444,444,259,18,In Transit
+445,445,202,246,Delivered
+446,446,357,51,In Transit
+447,447,124,43,Delivered
+448,448,7,209,Failed
+449,449,68,184,In Transit
+450,450,332,47,Pending
+451,451,343,157,Assigned
+452,452,236,293,Delivered
+453,453,13,233,In Transit
+454,454,71,208,Assigned
+455,455,190,321,In Transit
+456,456,325,1,Delivered
+457,457,37,198,Delivered
+458,458,171,272,Pending
+459,459,219,139,Delivered
+460,460,314,278,Delivered
+461,461,107,42,Delivered
+462,462,172,29,Delivered
+463,463,346,187,Delivered
+464,464,57,197,In Transit
+465,465,317,21,In Transit
+466,466,90,332,Delivered
+467,467,35,288,Delivered
+468,468,105,71,Returned
+469,469,123,277,Assigned
+470,470,245,298,Delivered
+471,471,360,108,Delivered
+472,472,116,165,In Transit
+473,473,137,258,Delivered
+474,474,142,28,Pending
+475,475,177,232,In Transit
+476,476,270,63,In Transit
+477,477,273,348,Delivered
+478,478,150,232,Delivered
+479,479,345,34,Assigned
+480,480,235,45,Pending
+481,481,92,148,Returned
+482,482,40,56,Assigned
+483,483,58,76,In Transit
+484,484,105,267,Returned
+485,485,12,151,In Transit
+486,486,350,278,Failed
+487,487,243,178,In Transit
+488,488,331,11,In Transit
+489,489,33,12,Delivered
+490,490,119,267,Delivered
+491,491,211,297,In Transit
+492,492,331,168,In Transit
+493,493,341,272,Delivered
+494,494,228,235,In Transit
+495,495,68,157,Assigned
+496,496,134,117,In Transit
+497,497,148,25,Assigned
+498,498,146,234,Returned
+499,499,317,83,Delivered
+500,500,147,94,Returned
+501,501,355,342,Delivered
+502,502,83,122,Assigned
+503,503,163,295,Assigned
+504,504,134,190,Assigned
+505,505,288,18,Delivered
+506,506,177,76,In Transit
+507,507,277,84,Delivered
+508,508,63,13,In Transit
+509,509,256,75,Failed
+510,510,164,80,Pending
+511,511,280,260,In Transit
+512,512,152,243,Delivered
+513,513,294,342,Assigned
+514,514,290,227,In Transit
+515,515,58,246,Failed
+516,516,72,348,Delivered
+517,517,158,13,In Transit
+518,518,113,229,In Transit
+519,519,168,29,Delivered
+520,520,100,299,Delivered
+521,521,143,101,Pending
+522,522,276,229,Delivered
+523,523,45,263,In Transit
+524,524,252,163,Delivered
+525,525,262,29,Failed
+526,526,185,204,Assigned
+527,527,219,190,In Transit
+528,528,7,146,In Transit
+529,529,158,229,Delivered
+530,530,45,111,Delivered
+531,531,228,213,Delivered
+532,532,148,84,Delivered
+533,533,218,213,Assigned
+534,534,301,307,Pending
+535,535,107,156,In Transit
+536,536,269,172,Pending
+537,537,303,193,Pending
+538,538,210,328,Failed
+539,539,213,90,Delivered
+540,540,291,71,Assigned
+541,541,196,149,Delivered
+542,542,22,155,Delivered
+543,543,156,253,Delivered
+544,544,238,115,Pending
+545,545,2,79,In Transit
+546,546,328,326,In Transit
+547,547,335,341,Delivered
+548,548,214,92,In Transit
+549,549,353,331,Assigned
+550,550,62,142,In Transit
+551,551,35,307,Delivered
+552,552,298,247,Delivered
+553,553,133,322,Delivered
+554,554,356,62,In Transit
+555,555,295,9,Delivered
+556,556,84,298,Pending
+557,557,164,237,Delivered
+558,558,70,183,Assigned
+559,559,140,185,In Transit
+560,560,183,25,In Transit
+561,561,272,328,Failed
+562,562,264,100,Delivered
+563,563,94,49,Delivered
+564,564,86,279,In Transit
+565,565,162,155,In Transit
+566,566,358,186,Pending
+567,567,297,181,Delivered
+568,568,7,71,Delivered
+569,569,191,249,In Transit
+570,570,84,53,Assigned
+571,571,258,114,Delivered
+572,572,287,315,Delivered
+573,573,270,273,Delivered
+574,574,360,59,In Transit
+575,575,40,60,Delivered
+576,576,9,246,In Transit
+577,577,354,186,Assigned
+578,578,227,306,Delivered
+579,579,176,89,Delivered
+580,580,15,61,Assigned
+581,581,356,73,Delivered
+582,582,158,65,Assigned
+583,583,41,218,Delivered
+584,584,58,40,Pending
+585,585,248,221,Pending
+586,586,56,17,Delivered
+587,587,263,304,Pending
+588,588,61,130,Pending
+589,589,155,342,Pending
+590,590,50,64,Failed
+591,591,106,301,Failed
+592,592,95,344,In Transit
+593,593,47,75,Delivered
+594,594,143,297,In Transit
+595,595,83,257,Delivered
+596,596,314,124,Delivered
+597,597,35,51,Delivered
+598,598,8,271,Assigned
+599,599,99,145,Assigned
+600,600,276,3,Returned
