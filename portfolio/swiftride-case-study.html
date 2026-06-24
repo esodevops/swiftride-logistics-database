@@ -1,0 +1,563 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="SwiftRide Logistics PostgreSQL and Supabase data engineering case study.">
+  <title>SwiftRide Logistics | Data Engineering Case Study</title>
+  <style>
+    :root {
+      --ink: #102435;
+      --ink-2: #334858;
+      --paper: #ffffff;
+      --soft: #f3f7f8;
+      --line: #d6e0e4;
+      --navy: #14334a;
+      --teal: #087f79;
+      --teal-light: #dff3f1;
+      --gold: #d5962d;
+      --gold-light: #fff4dd;
+      --red: #b84a50;
+      --green: #2d7d54;
+      --shadow: 0 12px 32px rgba(16, 36, 53, 0.1);
+      --content: 1180px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--paper);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.6;
+    }
+    img { display: block; max-width: 100%; }
+    a { color: inherit; }
+    button, a { -webkit-tap-highlight-color: transparent; }
+
+    .skip-link {
+      position: absolute;
+      left: 16px;
+      top: -60px;
+      z-index: 100;
+      padding: 10px 14px;
+      color: white;
+      background: var(--teal);
+    }
+    .skip-link:focus { top: 12px; }
+
+    .site-nav {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      border-bottom: 1px solid rgba(214, 224, 228, 0.85);
+      background: rgba(255, 255, 255, 0.94);
+      backdrop-filter: blur(12px);
+    }
+    .nav-inner {
+      width: min(calc(100% - 40px), var(--content));
+      min-height: 62px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      font-weight: 800;
+    }
+    .brand-mark {
+      width: 32px;
+      height: 32px;
+      display: grid;
+      place-items: center;
+      color: white;
+      background: var(--navy);
+      font-size: 13px;
+      font-weight: 900;
+    }
+    .nav-links { display: flex; align-items: center; gap: 24px; }
+    .nav-links a {
+      color: var(--ink-2);
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 700;
+    }
+    .nav-links a:hover, .nav-links a:focus-visible { color: var(--teal); }
+
+    .hero {
+      position: relative;
+      min-height: min(760px, calc(100vh - 62px));
+      display: flex;
+      align-items: flex-end;
+      overflow: hidden;
+      color: white;
+      background: var(--navy);
+      isolation: isolate;
+    }
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -2;
+      background: url("../docs/swiftride_erd.png") center / cover no-repeat;
+      opacity: 0.2;
+      filter: grayscale(1) contrast(1.25);
+    }
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      background: rgba(12, 38, 56, 0.88);
+    }
+    .hero-inner {
+      width: min(calc(100% - 40px), var(--content));
+      margin: 0 auto;
+      padding: 96px 0 74px;
+    }
+    .eyebrow {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin: 0 0 20px;
+      color: #9ee0d9;
+      font-size: 13px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0;
+    }
+    .eyebrow::before { content: ""; width: 36px; height: 3px; background: var(--gold); }
+    h1, h2, h3, p { margin-top: 0; }
+    h1 {
+      max-width: 920px;
+      margin-bottom: 22px;
+      font-size: clamp(44px, 7vw, 88px);
+      line-height: 0.98;
+      letter-spacing: 0;
+    }
+    .hero-copy {
+      max-width: 760px;
+      margin-bottom: 34px;
+      color: #dce8ed;
+      font-size: clamp(18px, 2.2vw, 24px);
+      line-height: 1.45;
+    }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; }
+    .button {
+      min-height: 46px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      padding: 0 18px;
+      border: 1px solid transparent;
+      border-radius: 6px;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 800;
+    }
+    .button-primary { color: var(--navy); background: white; }
+    .button-secondary { color: white; border-color: rgba(255,255,255,.55); background: transparent; }
+    .button:hover { transform: translateY(-1px); }
+
+    .metric-band { background: var(--soft); border-bottom: 1px solid var(--line); }
+    .metric-grid {
+      width: min(calc(100% - 40px), var(--content));
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+    }
+    .metric {
+      min-height: 126px;
+      padding: 26px 24px;
+      border-right: 1px solid var(--line);
+    }
+    .metric:first-child { border-left: 1px solid var(--line); }
+    .metric strong { display: block; color: var(--navy); font-size: 32px; line-height: 1.1; }
+    .metric span { display: block; margin-top: 7px; color: var(--ink-2); font-size: 13px; font-weight: 700; }
+
+    .section { padding: 88px 0; }
+    .section-soft { background: var(--soft); }
+    .section-dark { color: white; background: var(--navy); }
+    .container { width: min(calc(100% - 40px), var(--content)); margin: 0 auto; }
+    .section-head {
+      max-width: 760px;
+      margin-bottom: 42px;
+    }
+    .section-kicker {
+      margin-bottom: 10px;
+      color: var(--teal);
+      font-size: 13px;
+      font-weight: 900;
+      text-transform: uppercase;
+    }
+    .section-dark .section-kicker { color: #8ed8d1; }
+    h2 { margin-bottom: 16px; font-size: clamp(30px, 4vw, 48px); line-height: 1.08; letter-spacing: 0; }
+    h3 { margin-bottom: 10px; font-size: 20px; line-height: 1.25; letter-spacing: 0; }
+    .lead { color: var(--ink-2); font-size: 18px; }
+    .section-dark .lead { color: #d2e0e6; }
+
+    .problem-grid {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 64px;
+      align-items: start;
+    }
+    .problem-list { border-top: 1px solid var(--line); }
+    .problem-item {
+      display: grid;
+      grid-template-columns: 46px 1fr;
+      gap: 16px;
+      padding: 20px 0;
+      border-bottom: 1px solid var(--line);
+    }
+    .problem-number { color: var(--teal); font-size: 13px; font-weight: 900; }
+    .problem-item p { margin: 4px 0 0; color: var(--ink-2); }
+
+    .architecture-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.35fr) minmax(300px, .65fr);
+      gap: 28px;
+      align-items: stretch;
+    }
+    .asset-frame {
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: white;
+      box-shadow: var(--shadow);
+    }
+    .asset-frame img { width: 100%; height: 100%; object-fit: contain; background: white; }
+    .schema-list { display: grid; gap: 12px; }
+    .schema {
+      padding: 20px;
+      border-left: 4px solid var(--teal);
+      background: white;
+      box-shadow: 0 5px 16px rgba(16, 36, 53, 0.06);
+    }
+    .schema:nth-child(2) { border-left-color: var(--gold); }
+    .schema:nth-child(3) { border-left-color: var(--red); }
+    .schema:nth-child(4) { border-left-color: var(--green); }
+    .schema code { color: var(--teal); font-weight: 800; }
+    .schema p { margin: 5px 0 0; color: var(--ink-2); font-size: 14px; }
+
+    .flow {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      border-top: 1px solid rgba(255,255,255,.22);
+      border-bottom: 1px solid rgba(255,255,255,.22);
+    }
+    .flow-step { min-height: 196px; padding: 26px 22px; border-right: 1px solid rgba(255,255,255,.22); }
+    .flow-step:last-child { border-right: 0; }
+    .flow-index { color: #8ed8d1; font-size: 12px; font-weight: 900; }
+    .flow-step h3 { margin-top: 36px; }
+    .flow-step p { margin-bottom: 0; color: #c9d9e0; font-size: 14px; }
+
+    .achievement-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+    .achievement {
+      min-height: 220px;
+      padding: 28px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: white;
+    }
+    .achievement-tag {
+      display: inline-block;
+      margin-bottom: 28px;
+      padding: 5px 9px;
+      color: var(--teal);
+      background: var(--teal-light);
+      font-size: 12px;
+      font-weight: 900;
+    }
+    .achievement p { margin-bottom: 0; color: var(--ink-2); }
+
+    .insight-layout {
+      display: grid;
+      grid-template-columns: .8fr 1.2fr;
+      gap: 54px;
+      align-items: start;
+    }
+    .insight-table { width: 100%; border-collapse: collapse; font-size: 14px; }
+    .insight-table th, .insight-table td { padding: 14px 16px; border-bottom: 1px solid var(--line); text-align: left; }
+    .insight-table th { color: white; background: var(--navy); font-size: 12px; text-transform: uppercase; }
+    .insight-table tr:nth-child(even) td { background: var(--soft); }
+    .insight-table strong { color: var(--teal); }
+    .decision-list { display: grid; gap: 16px; }
+    .decision {
+      display: grid;
+      grid-template-columns: 12px 1fr;
+      gap: 14px;
+      align-items: start;
+    }
+    .decision::before { content: ""; width: 9px; height: 9px; margin-top: 8px; background: var(--gold); }
+    .decision p { margin-bottom: 0; color: var(--ink-2); }
+
+    .report-layout {
+      display: grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap: 54px;
+      align-items: center;
+    }
+    .report-preview {
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,.2);
+      border-radius: 8px;
+      background: white;
+      box-shadow: 0 20px 50px rgba(0,0,0,.2);
+    }
+    .report-copy p { color: #d2e0e6; }
+    .report-links { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
+
+    .stack {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 28px;
+    }
+    .stack span {
+      padding: 8px 11px;
+      border: 1px solid var(--line);
+      border-radius: 4px;
+      background: white;
+      color: var(--ink-2);
+      font-size: 13px;
+      font-weight: 800;
+    }
+
+    .closing {
+      padding: 74px 0;
+      text-align: center;
+      border-top: 1px solid var(--line);
+    }
+    .closing h2 { max-width: 760px; margin-left: auto; margin-right: auto; }
+    .closing p { max-width: 700px; margin: 0 auto 26px; color: var(--ink-2); }
+    footer { padding: 26px 0; color: #6b7d89; background: var(--soft); font-size: 13px; }
+    .footer-inner { width: min(calc(100% - 40px), var(--content)); margin: 0 auto; display: flex; justify-content: space-between; gap: 20px; }
+
+    @media (max-width: 900px) {
+      .nav-links a:not(.nav-cta) { display: none; }
+      .metric-grid { grid-template-columns: repeat(2, 1fr); }
+      .metric:last-child { grid-column: span 2; }
+      .problem-grid, .architecture-grid, .insight-layout, .report-layout { grid-template-columns: 1fr; }
+      .flow { grid-template-columns: 1fr; }
+      .flow-step { min-height: auto; border-right: 0; border-bottom: 1px solid rgba(255,255,255,.22); }
+      .flow-step:last-child { border-bottom: 0; }
+      .flow-step h3 { margin-top: 14px; }
+    }
+
+    @media (max-width: 620px) {
+      .nav-inner, .container, .hero-inner, .metric-grid, .footer-inner { width: min(calc(100% - 28px), var(--content)); }
+      .hero { min-height: 680px; }
+      .hero-inner { padding: 72px 0 48px; }
+      .hero-actions, .report-links { flex-direction: column; align-items: stretch; }
+      .button { width: 100%; }
+      .metric-grid { grid-template-columns: 1fr; }
+      .metric, .metric:first-child { border-left: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+      .metric:last-child { grid-column: auto; }
+      .section { padding: 64px 0; }
+      .achievement-grid { grid-template-columns: 1fr; }
+      .achievement { min-height: auto; }
+      .insight-table { font-size: 12px; }
+      .insight-table th, .insight-table td { padding: 10px 8px; }
+      .footer-inner { flex-direction: column; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { transition: none !important; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to project details</a>
+
+  <nav class="site-nav" aria-label="Case study navigation">
+    <div class="nav-inner">
+      <a class="brand" href="#top"><span class="brand-mark">SR</span><span>SwiftRide Case Study</span></a>
+      <div class="nav-links">
+        <a href="#architecture">Architecture</a>
+        <a href="#impact">Impact</a>
+        <a href="#reporting">Reporting</a>
+        <a class="nav-cta" href="https://github.com/esodevops/swiftride-logistics-database" target="_blank" rel="noreferrer">View repository</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero" id="top">
+    <div class="hero-inner">
+      <p class="eyebrow">PostgreSQL / Supabase / Data Engineering</p>
+      <h1>SwiftRide Logistics Database System</h1>
+      <p class="hero-copy">A production-minded relational data platform that transforms fragmented logistics records into governed, queryable operations and decision-ready management reporting.</p>
+      <div class="hero-actions">
+        <a class="button button-primary" href="#impact">Explore the impact</a>
+        <a class="button button-secondary" href="../reports/swiftride_management_report.pdf" target="_blank">Open management report</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="metric-band" aria-label="Project metrics">
+      <div class="metric-grid">
+        <div class="metric"><strong>3,960</strong><span>records integrated</span></div>
+        <div class="metric"><strong>8</strong><span>relational tables</span></div>
+        <div class="metric"><strong>4</strong><span>business schemas</span></div>
+        <div class="metric"><strong>110.2M</strong><span>total order value analyzed</span></div>
+        <div class="metric"><strong>2</strong><span>management report formats</span></div>
+      </div>
+    </section>
+
+    <section class="section" id="objective">
+      <div class="container problem-grid">
+        <div>
+          <p class="section-kicker">The objective</p>
+          <h2>Replace manual records with a reliable operating model.</h2>
+          <p class="lead">SwiftRide needed a single source of truth for customers, orders, deliveries, fleet resources, inventory, and payments. I designed the system to protect data integrity first, then make analysis repeatable.</p>
+        </div>
+        <div class="problem-list">
+          <div class="problem-item"><span class="problem-number">01</span><div><h3>Unreliable records</h3><p>Duplicate customers, missing payment details, and inconsistent inventory made reporting difficult to trust.</p></div></div>
+          <div class="problem-item"><span class="problem-number">02</span><div><h3>Broken dependencies</h3><p>Orders, drivers, vehicles, and deliveries needed explicit relationships and safe cascading behavior.</p></div></div>
+          <div class="problem-item"><span class="problem-number">03</span><div><h3>Slow operational visibility</h3><p>Management lacked a reusable view of delivery status, customer value, payment health, and stock risk.</p></div></div>
+          <div class="problem-item"><span class="problem-number">04</span><div><h3>Development-to-production gap</h3><p>The solution needed repeatable imports, environment-based credentials, role controls, and shareable reporting beyond a local SQL client.</p></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-soft" id="architecture">
+      <div class="container">
+        <div class="section-head">
+          <p class="section-kicker">Technical architecture</p>
+          <h2>Four schemas, one connected operational view.</h2>
+          <p class="lead">The architecture separates business domains while preserving cross-schema relationships through primary keys, foreign keys, validation constraints, and cascade rules.</p>
+        </div>
+        <div class="architecture-grid">
+          <figure class="asset-frame">
+            <img src="../docs/swiftride_erd.png" alt="Entity relationship diagram for the SwiftRide Logistics PostgreSQL database">
+          </figure>
+          <div class="schema-list">
+            <div class="schema"><h3><code>operations</code></h3><p>Customers, orders, and deliveries form the core transaction workflow.</p></div>
+            <div class="schema"><h3><code>fleet</code></h3><p>Drivers and vehicles support assignment, status, and capacity analysis.</p></div>
+            <div class="schema"><h3><code>warehouse</code></h3><p>Warehouse locations and inventory quantities enable stock monitoring.</p></div>
+            <div class="schema"><h3><code>finance</code></h3><p>Payments connect financial status directly to customer orders.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-dark">
+      <div class="container">
+        <div class="section-head">
+          <p class="section-kicker">Delivery workflow</p>
+          <h2>From raw CSV files to management decisions.</h2>
+          <p class="lead">I treated the project as an operational pipeline, not a collection of isolated SQL exercises.</p>
+        </div>
+        <div class="flow">
+          <div class="flow-step"><span class="flow-index">01</span><h3>Model</h3><p>Translated business requirements into normalized entities and relationships.</p></div>
+          <div class="flow-step"><span class="flow-index">02</span><h3>Govern</h3><p>Applied keys, uniqueness, checks, cascading rules, and role-based access controls.</p></div>
+          <div class="flow-step"><span class="flow-index">03</span><h3>Load</h3><p>Automated foreign-key-safe CSV ingestion into Supabase PostgreSQL.</p></div>
+          <div class="flow-step"><span class="flow-index">04</span><h3>Analyze</h3><p>Built reusable DQL for revenue, delivery, customer, fleet, payment, and inventory analysis.</p></div>
+          <div class="flow-step"><span class="flow-index">05</span><h3>Communicate</h3><p>Generated Markdown and color PDF reports for technical and management audiences.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-soft" id="impact">
+      <div class="container">
+        <div class="section-head">
+          <p class="section-kicker">Key achievements</p>
+          <h2>Built for repeatability, integrity, and business use.</h2>
+          <p class="lead">The strongest outcome was not a single query. It was an end-to-end system that could be recreated, validated, analyzed, and explained.</p>
+        </div>
+        <div class="achievement-grid">
+          <article class="achievement"><span class="achievement-tag">Data integrity</span><h3>Enforced valid operational relationships</h3><p>Validated every dataset foreign key and used PostgreSQL constraints to prevent orphaned orders, deliveries, payments, and inventory records.</p></article>
+          <article class="achievement"><span class="achievement-tag">Automation</span><h3>Created a one-command Supabase loader</h3><p>Handled schema initialization, ordered CSV imports, constraint updates, sequence repair, and post-load row-count validation.</p></article>
+          <article class="achievement"><span class="achievement-tag">Security</span><h3>Separated access by business responsibility</h3><p>Introduced DCL and RBAC patterns for finance and operational schemas while keeping connection secrets outside version control.</p></article>
+          <article class="achievement"><span class="achievement-tag">Communication</span><h3>Converted analysis into executive reporting</h3><p>Delivered both GitHub-friendly Markdown and a styled eight-page PDF with operational summaries and recommended actions.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container insight-layout">
+        <div>
+          <p class="section-kicker">Measured findings</p>
+          <h2>Insights management can act on.</h2>
+          <p class="lead">The analytical layer surfaces performance, exceptions, and financial signals without requiring management to read raw SQL output.</p>
+          <div class="stack" aria-label="Technologies used">
+            <span>PostgreSQL</span><span>Supabase</span><span>SQL</span><span>Bash</span><span>Python</span><span>ReportLab</span><span>Draw.io</span>
+          </div>
+        </div>
+        <div>
+          <table class="insight-table">
+            <thead><tr><th>Signal</th><th>Result</th><th>Why it matters</th></tr></thead>
+            <tbody>
+              <tr><td>Payment health</td><td><strong>423 paid</strong></td><td>70.5% of 600 payments completed successfully.</td></tr>
+              <tr><td>Delivery progress</td><td><strong>234 delivered</strong></td><td>Creates a baseline for fulfillment performance.</td></tr>
+              <tr><td>Delivery exceptions</td><td><strong>62 pending</strong></td><td>Identifies orders requiring immediate operational follow-up.</td></tr>
+              <tr><td>Inventory risk</td><td><strong>10 low-stock items</strong></td><td>Highlights products below the quantity threshold of 20.</td></tr>
+              <tr><td>Customer value</td><td><strong>2.03M top spend</strong></td><td>Supports retention and premium-service targeting.</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-soft">
+      <div class="container insight-layout">
+        <div>
+          <p class="section-kicker">Business translation</p>
+          <h2>Every query ends with a decision.</h2>
+        </div>
+        <div class="decision-list">
+          <div class="decision"><div><h3>Prioritize delayed work</h3><p>Use pending-delivery records to focus dispatch follow-up and reduce customer wait time.</p></div></div>
+          <div class="decision"><div><h3>Protect revenue</h3><p>Track failed, pending, and refunded payments as a finance exception queue.</p></div></div>
+          <div class="decision"><div><h3>Prevent stockouts</h3><p>Use low-inventory detection to trigger timely replenishment decisions.</p></div></div>
+          <div class="decision"><div><h3>Reward high-value customers</h3><p>Rank customers by total order value to support loyalty and retention programs.</p></div></div>
+          <div class="decision"><div><h3>Balance fleet workload</h3><p>Compare driver delivery counts and statuses to improve assignment decisions.</p></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-dark" id="reporting">
+      <div class="container report-layout">
+        <figure class="report-preview">
+          <img src="assets/management-report-preview.png" alt="First page of the SwiftRide Logistics color management report">
+        </figure>
+        <div class="report-copy">
+          <p class="section-kicker">Executive reporting</p>
+          <h2>Analysis packaged for the audience.</h2>
+          <p>The reporting layer presents coverage metrics, high-value customers, delivery and payment status, revenue, low inventory, and recommended management actions.</p>
+          <p>The report generator queries Supabase read-only and produces consistent output that can be reviewed on GitHub or shared as a color PDF.</p>
+          <div class="report-links">
+            <a class="button button-primary" href="../reports/swiftride_management_report.pdf" target="_blank">View color PDF</a>
+            <a class="button button-secondary" href="../reports/swiftride_management_report.md" target="_blank">View Markdown report</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="closing">
+      <div class="container">
+        <p class="section-kicker">The takeaway</p>
+        <h2>Moving beyond pgAdmin means designing for production outcomes.</h2>
+        <p>This project demonstrates how I connect database engineering, automation, governance, analysis, and stakeholder communication into one coherent delivery.</p>
+        <a class="button" style="color:white;background:var(--teal)" href="https://github.com/esodevops/swiftride-logistics-database" target="_blank" rel="noreferrer">Explore the GitHub repository</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-inner"><span>SwiftRide Logistics Data Engineering Case Study</span><span>PostgreSQL / Supabase / SQL</span></div>
+  </footer>
+</body>
+</html>

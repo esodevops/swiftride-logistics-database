@@ -1,0 +1,71 @@
+<!-- Add this as the first <article> inside <section class="posts">. -->
+<article>
+  <header>
+    <h2>
+      <a href="https://github.com/esodevops/swiftride-logistics-database" target="_blank"
+        >SwiftRide Logistics: Production-Ready PostgreSQL Data Platform</a
+      >
+    </h2>
+  </header>
+  <a
+    href="https://github.com/esodevops/swiftride-logistics-database/blob/main/docs/swiftride_erd.png"
+    target="_blank"
+    class="image fit"
+    ><img
+      src="images/swiftride-erd.png"
+      alt="Entity relationship diagram for the SwiftRide Logistics PostgreSQL database"
+  /></a>
+  <p style="text-align: justify">
+    Designed and deployed a relational data platform for a logistics company, replacing fragmented operational records
+    with a governed PostgreSQL system hosted on Supabase. The solution organizes customers, orders, deliveries, drivers,
+    vehicles, warehouses, inventory, and payments across four business schemas while preserving end-to-end referential
+    integrity.
+  </p>
+  <p style="text-align: justify">
+    Built a one-command Bash loader that initializes the schema, applies validation constraints, imports CSV files in
+    foreign-key-safe order, repairs PostgreSQL sequences, and verifies row counts after ingestion. Added DDL, DML, DQL,
+    and DCL layers, environment-based credential handling, cascading rules, and role-based access patterns for
+    production-minded database operations.
+  </p>
+  <div
+    style="
+      background-color: #f0f0f0;
+      padding: 15px;
+      border-left: 4px solid greenyellow;
+      border-radius: 4px;
+      margin: 15px 0;
+      text-align: left;
+    "
+  >
+    <strong style="color: black">Measured Results</strong>
+    <ul style="color: black; margin: 10px 0 0 20px">
+      <li>3,960 records integrated across 8 relational tables and 4 schemas.</li>
+      <li>600 orders, deliveries, and payments analyzed across the operational lifecycle.</li>
+      <li>110.2M in total order value surfaced for revenue and customer-value analysis.</li>
+      <li>62 pending deliveries and 10 low-stock items identified for management action.</li>
+    </ul>
+  </div>
+  <p style="text-align: justify">
+    Converted SQL analysis into stakeholder-ready outputs, including a GitHub-friendly Markdown report and a styled
+    eight-page color PDF. The reports translate customer value, driver workload, delivery performance, payment health,
+    revenue, and inventory risk into clear operational recommendations.
+  </p>
+  <ul class="actions special">
+    <li>
+      <a
+        href="https://github.com/esodevops/swiftride-logistics-database/blob/main/reports/swiftride_management_report.pdf"
+        target="_blank"
+        class="button"
+        >View Report</a
+      >
+    </li>
+    <li>
+      <a
+        href="https://github.com/esodevops/swiftride-logistics-database"
+        class="icon brands fa-github"
+        target="_blank"
+        ><span class="label">GitHub</span></a
+      >
+    </li>
+  </ul>
+</article>

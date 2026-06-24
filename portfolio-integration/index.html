@@ -1,0 +1,459 @@
+<!doctype html>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+  <head>
+    <title>My Portfolio</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="shortcut icon" href="assets/data-portfolio.png" type="image/x-icon" />
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+  </head>
+  <style>
+    .button {
+      background-color: greenyellow;
+    }
+  </style>
+  <body class="is-preload">
+    <!-- Wrapper -->
+    <div id="wrapper" class="fade-in">
+      <!-- Intro -->
+      <div id="intro">
+        <h1 style="color: greenyellow">Sulaimon Ekundayo Portfolio</h1>
+        <p>
+          This portfolio presents my data engineering projects, demonstrating my ability to design scalable data
+          pipelines,<br />
+          manage data infrastructure, and deliver data-driven solutions.
+        </p>
+        <ul class="actions">
+          <li><a href="#header" class="button icon solid solo fa-arrow-down scrolly">Continue</a></li>
+        </ul>
+      </div>
+
+      <!-- Header -->
+      <header id="header">
+        <a href="index.html" style="color: greenyellow" class="logo">Major Projects</a>
+      </header>
+
+      <!-- Nav -->
+      <nav id="nav">
+        <ul class="links">
+          <li class=""><a href="index.html">Project Titles</a></li>
+          <li class=""><a href="https://sulaimonekundayo.com/" target="_blank">About Me</a></li>
+        </ul>
+        <ul class="icons">
+          <li>
+            <a href="https://www.linkedin.com/in/sulaimon-ekundayo/" class="icon brands fa-linkedin" target="_blank"
+              ><span class="label">LinkedIn</span></a
+            >
+          </li>
+          <li>
+            <a href="https://github.com/esodevops/" class="icon brands fa-github" target="_blank"
+              ><span class="label">GitHub</span></a
+            >
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Main -->
+      <div id="main">
+        <!-- Featured Post -->
+        <article class="post featured">
+          <header class="major">
+            <h2>
+              <a href="#">From Raw CSVs to a Hardened Production Database: MetroBank Case Study</a>
+            </h2>
+            <p style="text-align: justify">
+              Designed and delivered a production-grade PostgreSQL banking database covering the full data engineering
+              lifecycle: schema design, data ingestion, security, performance, and analytics. Built a 7-table normalised
+              schema — branches, customers, employees, accounts, transactions, loans, and an account_balance_audit_log —
+              using a parent-first migration strategy to enforce FK integrity across all tables. Implemented a
+              staging-to-production CSV loader that reads raw files into temporary all-text tables, cleanses and
+              normalises the data (phone formatting, email validation with fallback generation, type standardisation),
+              then merges into production via upsert — atomically, inside a single transaction with automatic rollback
+              on failure. Hardened the schema with regex CHECK constraints on emails and UK phone numbers, non-negative
+              balance guards, audit metadata (created_at, updated_at, created_by) on every table, and PL/pgSQL trigger
+              functions that automatically maintain updated_at and write an immutable audit record on every account
+              balance change. Configured role-based access control (app_user for CRUD, readonly_analyst for
+              SELECT-only), added B-tree indexes on high-frequency join and filter columns, and wrote 10+ business
+              analytics queries covering customer geography, portfolio breakdown, loan exposure, transaction trends, and
+              branch performance.
+            </p>
+            <p style="text-align: justify">
+              Customer records arrive with validated email addresses and correctly formatted UK phone numbers (+44).
+              Account balances can never go negative. Foreign key constraints mean no transaction or loan can reference
+              a non-existent account or customer. The bank's data is reliable from the moment it enters the system — not
+              after a manual cleanup cycle.
+            </p>
+            <p style="text-align: justify">
+              Every account balance change — regardless of which application or user triggered it — is automatically
+              captured in <strong>account_balance_audit_log</strong> with the old value, new value, the amount of
+              change, a timestamp, and the responsible database user. This satisfies a core requirement of financial
+              audit frameworks (e.g. FCA, SOX) without relying on application developers to implement it correctly.
+            </p>
+          </header>
+          <a href="#" class="image main"><img src="images/metrobank.jpg" alt="" /></a>
+          <ul class="actions special">
+            <li>
+              <a href="https://ik.imagekit.io/wiryqrudj/erd-postgre.png" target="_blank" class="button large"
+                >Check it out!</a
+              >
+            </li>
+
+            <li>
+              <a href="https://github.com/esodevops/metrobank-prod" target="_blank" class="icon brands fa-github"
+                ><span class="label">GitHub</span></a
+              >
+            </li>
+          </ul>
+        </article>
+
+        <!-- Posts -->
+        <section class="posts">
+          <!-- SwiftRide Logistics Project -->
+          <article>
+            <header>
+              <h2>
+                <a href="https://github.com/esodevops/swiftride-logistics-database" target="_blank"
+                  >SwiftRide Logistics: Production-Ready PostgreSQL Data Platform</a
+                >
+              </h2>
+            </header>
+            <a
+              href="https://github.com/esodevops/swiftride-logistics-database/blob/main/docs/swiftride_erd.png"
+              target="_blank"
+              class="image fit"
+              ><img
+                src="images/swiftride-erd.png"
+                alt="Entity relationship diagram for the SwiftRide Logistics PostgreSQL database"
+            /></a>
+            <p style="text-align: justify">
+              Designed and deployed a relational data platform for a logistics company, replacing fragmented operational
+              records with a governed PostgreSQL system hosted on Supabase. The solution organizes customers, orders,
+              deliveries, drivers, vehicles, warehouses, inventory, and payments across four business schemas while
+              preserving end-to-end referential integrity.
+            </p>
+            <p style="text-align: justify">
+              Built a one-command Bash loader that initializes the schema, applies validation constraints, imports CSV
+              files in foreign-key-safe order, repairs PostgreSQL sequences, and verifies row counts after ingestion.
+              Added DDL, DML, DQL, and DCL layers, environment-based credential handling, cascading rules, and role-based
+              access patterns for production-minded database operations.
+            </p>
+            <div
+              style="
+                background-color: #f0f0f0;
+                padding: 15px;
+                border-left: 4px solid greenyellow;
+                border-radius: 4px;
+                margin: 15px 0;
+                text-align: left;
+              "
+            >
+              <strong style="color: black">Measured Results</strong>
+              <ul style="color: black; margin: 10px 0 0 20px">
+                <li>3,960 records integrated across 8 relational tables and 4 schemas.</li>
+                <li>600 orders, deliveries, and payments analyzed across the operational lifecycle.</li>
+                <li>110.2M in total order value surfaced for revenue and customer-value analysis.</li>
+                <li>62 pending deliveries and 10 low-stock items identified for management action.</li>
+              </ul>
+            </div>
+            <p style="text-align: justify">
+              Converted SQL analysis into stakeholder-ready outputs, including a GitHub-friendly Markdown report and a
+              styled eight-page color PDF. The reports translate customer value, driver workload, delivery performance,
+              payment health, revenue, and inventory risk into clear operational recommendations.
+            </p>
+            <ul class="actions special">
+              <li>
+                <a
+                  href="https://github.com/esodevops/swiftride-logistics-database/blob/main/reports/swiftride_management_report.pdf"
+                  target="_blank"
+                  class="button"
+                  >View Report</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://github.com/esodevops/swiftride-logistics-database"
+                  class="icon brands fa-github"
+                  target="_blank"
+                  ><span class="label">GitHub</span></a
+                >
+              </li>
+            </ul>
+          </article>
+
+          <article>
+            <header>
+              <h2><a href="#">Bonga CommerceFlow: Production-Ready Ecommerce Data Pipeline</a></h2>
+            </header>
+            <a href="#" class="image fit"><img src="images/bonga.jpg" alt="" /></a>
+            <p>
+              Built a production-ready data engineering pipeline for Bonga Ecommerce that ingests CSV datasets into
+              PostgreSQL using Docker, SQL, and automation scripts. The project includes clean folder organization,
+              ERD-backed schema design, idempotent load scripts, validation queries, local dev and production-like
+              environment profiles, and CI/CD automation with GitHub Actions.
+            </p>
+
+            <p>
+              Results:
+              <li style="text-align: justify; margin-left: 40px">
+                100 realistic rows loaded for each core table (products, customers, orders, orderitems).
+              </li>
+              <li style="text-align: justify; margin-left: 40px">
+                Repeatable pipeline execution with schema creation, data load, and integrity validation.
+              </li>
+              <li style="text-align: justify; margin-left: 40px">
+                Documented query questions and executable SQL solutions for analytics tasks.
+              </li>
+              <li style="text-align: justify; margin-left: 40px">
+                Secure setup with environment separation and GitHub Secrets for CI credentials.
+              </li>
+            </p>
+
+            <p>
+              Client Benefits:
+              <li style="text-align: justify; margin-left: 40px">
+                Faster onboarding for new engineers through a simple, documented workflow.
+              </li>
+              <li style="text-align: justify; margin-left: 40px">
+                Reliable and consistent data loading process with fewer manual errors.
+              </li>
+              <li style="text-align: justify; margin-left: 40px">
+                Better decision-making readiness through structured, queryable ecommerce data.
+              </li>
+              <li style="text-align: justify; margin-left: 40px">
+                Safer operations through secret management and data exposure policy controls.
+              </li>
+            </p>
+
+            <ul class="actions special">
+              <li>
+                <a href="https://ik.imagekit.io/wiryqrudj/bonga.png" class="button" target="_blank">Check it out!</a>
+              </li>
+              <li>
+                <a href="https://github.com/esodevops/bonga-ecommerce" class="icon brands fa-github" target="_blank"
+                  ><span class="label">GitHub</span></a
+                >
+              </li>
+            </ul>
+          </article>
+          <article>
+            <header>
+              <h2>
+                <a href="#">Bonga CommerceFlow: Secure Cloud-Integrated Ecommerce Data Pipeline</a>
+              </h2>
+            </header>
+            <a href="#" class="image fit"><img src="images/bonga.jpg" alt="" /></a>
+            <p>
+              <strong>Project Overview:</strong> <br />
+              Bonga CommerceFlow is a production-ready ecommerce data engineering project that automates the ingestion
+              of CSV datasets into PostgreSQL using Docker, SQL scripts, Bash automation, and GitHub Actions. The pipeline
+              was designed to be repeatable, structured, and secure, with clear separation between development and
+              production-style workflows.
+            </p>
+
+            <p>
+              A key upgrade in the project is the introduction of Amazon S3 as the source for private production
+              datasets. Instead of depending only on local files, the pipeline can now fetch protected CSV files from an
+              S3 bucket before loading them into the database. This makes the workflow more realistic, more secure, and
+              better aligned with real-world data engineering practices.
+            </p>
+
+            <p>
+              I designed and implemented a complete data pipeline that:
+              <li style="text-align: justify; margin-left: 40px">
+                Creates the PostgreSQL schema with the right table relationships and constraints.
+              </li>
+              <li style="text-align: justify; margin-left: 40px">
+                Loads ecommerce datasets for products, customers, orders, and orderitems.
+              </li>
+              <li style="text-align: justify; margin-left: 40px">
+                Validates row counts and referential integrity after every run.
+              </li>
+              <li style="text-align: justify; margin-left: 40px">
+                Supports repeatable local execution with Docker and environment-specific profiles.
+              </li>
+              <li style="text-align: justify; margin-left: 40px">Automates pipeline execution in GitHub Actions.</li>
+              <li style="text-align: justify; margin-left: 40px">
+                Integrates Amazon S3 for secure private-data ingestion in CI/CD and local runs.
+              </li>
+              <li style="text-align: justify; margin-left: 40px">
+                Falls back to demo data in `data/raw/` when S3 data is unavailable.
+              </li>
+            </p>
+
+            <p
+              style="
+                background-color: #f0f0f0;
+                padding: 15px;
+                border-left: 4px solid greenyellow;
+                border-radius: 4px;
+                margin: 15px 0;
+              "
+            >
+              <strong style="color: black">Result:</strong> <br />
+              The project delivers a reliable and reusable pipeline that successfully loads structured ecommerce data
+              into PostgreSQL and verifies data quality at each run. It supports secure secret handling, cloud-backed
+              file ingestion, and a documented workflow that is easy to run, test, and maintain.
+            </p>
+
+            <p
+              style="
+                background-color: #f0f0f0;
+                padding: 15px;
+                border-left: 4px solid greenyellow;
+                border-radius: 4px;
+                margin: 15px 0;
+              "
+            >
+              <strong style="color: black">Client Benefit:</strong> <br />
+              This project gives the client a cleaner and more production-aligned data workflow. It reduces manual data
+              loading effort, improves consistency across environments, protects sensitive datasets by moving them to S3,
+              and makes the pipeline easier to operate in both local development and CI/CD. The result is faster
+              onboarding, safer data handling, and a stronger foundation for reporting, analytics, and future data
+              platform growth.
+            </p>
+            <ul class="actions special">
+              <li>
+                <a href="https://ik.imagekit.io/wiryqrudj/bonga.png" class="button" target="_blank">Check it out!</a>
+              </li>
+              <li>
+                <a href="https://github.com/esodevops/bonga-ecommerce-s3" class="icon brands fa-github" target="_blank"
+                  ><span class="label">GitHub</span></a
+                >
+              </li>
+            </ul>
+          </article>
+          <article>
+            <header>
+              <h2>
+                <a href="#">Customer Analysis in Airline Business</a>
+              </h2>
+            </header>
+            <a href="#" class="image fit"><img src="images/airline.jpg" alt="" /></a>
+            <p>
+              Conducted a data-driven analysis of airline customers to understand travel behavior, preferences, and pain
+              points. The analysis focused on booking patterns, customer segmentation, and service feedback to identify
+              key factors influencing customer satisfaction and retention.
+            </p>
+
+            <p>
+              Using customer data, distinct segments were identified based on travel frequency, class preference, and
+              purchasing behavior. Insights revealed that delays, pricing transparency, and personalized offers were the
+              main drivers of customer experience.
+            </p>
+
+            <p>
+              Based on these findings, recommendations included improving communication during delays, introducing
+              targeted promotions, and enhancing loyalty programs for frequent travelers.
+            </p>
+
+            <p>
+              As a result, the airline achieved improved customer satisfaction, increased repeat bookings, and more
+              effective marketing campaigns tailored to specific customer segments.
+            </p>
+            <ul class="actions special">
+              <li><a href="#" class="button">Check it out!</a></li>
+            </ul>
+          </article>
+          <article>
+            <header>
+              <h2>
+                <a href="#">Customer Analysis & Business Impact</a>
+              </h2>
+            </header>
+            <a href="#" class="image fit"><img src="images/culinary.jpg" alt="" /></a>
+            <p>
+              To better understand customer behavior in the culinary business, data was collected through sales records,
+              customer feedback, and purchase patterns. The analysis focused on identifying popular menu items, peak
+              ordering times, and customer preferences.
+            </p>
+
+            <p>
+              Based on the findings, key recommendations were made, including optimizing the menu by promoting
+              high-demand items, adjusting pricing strategies, and improving service during peak hours. Additionally,
+              targeted promotions were introduced to increase customer engagement.
+            </p>
+
+            <p>
+              As a result, the business experienced improved customer satisfaction, increased repeat orders, and a
+              noticeable growth in overall sales. The data-driven approach enabled more informed decision-making and
+              enhanced operational efficiency.
+            </p>
+            <ul class="actions special">
+              <li><a href="#" class="button">Check it out!</a></li>
+              <li>
+                <a href="https://github.com/esodevops/" class="icon brands fa-github"
+                  ><span class="label">GitHub</span></a
+                >
+              </li>
+            </ul>
+          </article>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+          <div class="pagination">
+            <!-- <a href="#" class="previous">Prev</a> -->
+            <a href="index.html" class="page">1</a>
+            <a href="elements.html" class="page">2</a>
+            <!-- <span class="extra">&hellip;</span> -->
+            <!-- <a href="#" class="next">Next</a> -->
+          </div>
+        </footer>
+      </div>
+
+      <!-- Footer -->
+      <footer id="footer">
+        <section class="split contact">
+          <section class="alt">
+            <h3>Address</h3>
+            <p>Manchester, UK</p>
+          </section>
+          <section>
+            <h3>Email</h3>
+            <p><a href="#">sulaimon.ekundayo1@gmail.com</a></p>
+          </section>
+          <section>
+            <h3>Social</h3>
+            <ul class="icons alt">
+              <li>
+                <a href="#" class="icon brands alt fa-linkedin"><span class="label">LinkedIn</span></a>
+              </li>
+              <li>
+                <a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a>
+              </li>
+            </ul>
+          </section>
+        </section>
+      </footer>
+
+      <!-- Copyright -->
+      <div id="copyright">
+        <ul>
+          <li>
+            &copy;
+            <script>
+              document.write(new Date().getFullYear());
+            </script>
+            Sulaimon Ekundayo
+          </li>
+          <!-- <li>Design: <a href="https://html5up.net">HTML5 UP</a></li> -->
+        </ul>
+      </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
